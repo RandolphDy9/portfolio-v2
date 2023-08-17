@@ -8,12 +8,12 @@ type CardType = {
 
 const Card = ({ date, company, position, description, cards }: CardType) => {
   return (
-    <div className="flex flex-row my-12">
+    <div className="flex flex-row my-12 md:my-20">
       <div className="flex flex-col justify-start w-1/3 text-right mx-4 font-secondary">
         {date}
       </div>
       <div className="flex flex-col justify-start w-2/3 mx-4">
-        <div className="text-2xl font-main">{company}</div>
+        <div className="text-2xl font-main text-accent font-bold">{company}</div>
         <div className="text-lg font-main">{position}</div>
         <div className="font-secondary">{description}</div>
         <div className="flex gap-2 my-1">
@@ -30,7 +30,7 @@ const Card = ({ date, company, position, description, cards }: CardType) => {
 
 const Badge = ({ label }: { label: string }) => {
   return (
-    <div className="px-3 py-1 font-secondary border rounded-lg text-xs">
+    <div className="px-3 py-1 font-secondary border border-accent text-accent rounded-lg text-xs">
       { label }
     </div>
   )
@@ -38,10 +38,10 @@ const Badge = ({ label }: { label: string }) => {
 
 const Experience = () => {
   return (
-    <div className="border">
+    <div>
       <Card
         date="August 2018 - Present"
-        company="Exist Siftware Labs, Inc."
+        company="Exist Software Labs, Inc."
         position="Frontend Developer • Full time"
         description="Contributed to the core system of development by working on modules
         and new features for applications using HTML5, CSS3, JavaScript, and

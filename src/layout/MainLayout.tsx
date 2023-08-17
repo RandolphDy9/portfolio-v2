@@ -1,25 +1,30 @@
-import FacebookIcon from "../assets/icons/light/facebook.svg";
-import GithubIcon from "../assets/icons/light/github.svg";
-import CodepenIcon from "../assets/icons/light/codepen.svg";
-import linkedinIcon from "../assets/icons/light/linkedin.svg";
+import FacebookBlack from '../assets/icons/light/01-fb-black.svg';
+import FacebookWhite from '../assets/icons/dark/01-fb-white.svg';
+import GithubBlack from '../assets/icons/light/02-github-black.svg';
+import GithubWhite from '../assets/icons/dark/02-github-white.svg';
+import CodepenBlack from '../assets/icons/light/03-codepen-black.svg';
+import CodepenWhite from '../assets/icons/dark/03-codepen-white.svg';
+import LinkedinBlack from '../assets/icons/light/04-linkedin-black.svg';
+import LinkedinWhite from '../assets/icons/dark/04-linkedin-white.svg';
 
 type LayoutType = {
+  darkMode: boolean;
   children: React.ReactElement;
 }
 
-const MainLayout = ({ children }: LayoutType) => {
+const MainLayout = ({ darkMode, children }: LayoutType) => {
   return (
     <div className="flex flex-row justify-between min-h-screen overflow-hidden">
 
       <div className="flex flex-col gap-7 fixed left-12 top-1/2 transform -translate-y-1/2 items-center">
-        <img src={FacebookIcon} alt="facebook-icon" width="24" className="cursor-pointer" onClick={() => window.open('https://www.facebook.com/randolph.dy/', '_blank')} />
-        <img src={GithubIcon} alt="github-icon" width="24" className="cursor-pointer" onClick={() => window.open('https://github.com/RandolphDy9', '_blank')} />
-        <img src={CodepenIcon} alt="codepen-icon" width="24" className="cursor-pointer" onClick={() => window.open('https://codepen.io/Randolph-Mayson-Dy', '_blank')} />
-        <img src={linkedinIcon} alt="linkedin-icon" width="24" className="cursor-pointer" onClick={() => window.open('https://codepen.io/Randolph-Mayson-Dy', '_blank')} />
+        <img src={`${darkMode ? FacebookWhite : FacebookBlack}`} alt="facebook-icon" width="24" className="cursor-pointer" onClick={() => window.open('https://www.facebook.com/randolph.dy/', '_blank')} />
+        <img src={`${darkMode ? GithubWhite : GithubBlack}`} alt="github-icon" width="24" className="cursor-pointer" onClick={() => window.open('https://github.com/RandolphDy9', '_blank')} />
+        <img src={`${darkMode ? CodepenWhite : CodepenBlack}`} alt="codepen-icon" width="24" className="cursor-pointer" onClick={() => window.open('https://codepen.io/Randolph-Mayson-Dy', '_blank')} />
+        <img src={`${darkMode ? LinkedinWhite : LinkedinBlack}`} alt="linkedin-icon" width="24" className="cursor-pointer" onClick={() => window.open('https://codepen.io/Randolph-Mayson-Dy', '_blank')} />
       </div>
 
       <div className="w-10/12 mx-auto overflow-y-auto">
-        <div className="flex self-start border min-h-screen h-100 shadow-xl rounded-b-lg">
+        <div className="flex self-start min-h-screen h-100 shadow-xl rounded-b-lg">
           { children }
         </div>
         <div className="my-12 text-center text-sm mx-auto">
@@ -29,7 +34,7 @@ const MainLayout = ({ children }: LayoutType) => {
 
       <div className="flex flex-col gap-7 fixed right-0 top-1/2 transform translate-y-1/2 items-center">
         {/* <div className="border-l border-dark h-16"></div> */}
-        <div className="transform rotate-90 text-sm">mayson.dy@gmail.com</div>
+        <div className="transform rotate-90 text-sm font-bold">mayson.dy@gmail.com</div>
         {/* <div className="transform rotate-90 text-sm">Why are you tilting your head like that? :o</div> */}
       </div>
     </div>

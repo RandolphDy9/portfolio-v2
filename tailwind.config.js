@@ -8,13 +8,18 @@ export default {
     extend: {
       colors: {
         // accent: "#71EAC6",
-        accent: "#01DC73",
-        lightPrimary: "#254B45",
-        dark: "#27232C"
+        // accent: "#00ff87",
+        accent: "#707aff",
+        lightPrimary: "#FFFFFF",
+        dark: "#171717",
+        light: "#F1F1F1",
+        from: "#03A696",
+        to: "#03aa60"
       },
       fontFamily: {
         'main': ['Poppins', 'sans-serif'],
-        'secondary': ['Montserrat', 'sans-serif']
+        'secondary': ['Poppins', 'sans-serif']
+        // 'secondary': ['Montserrat', 'sans-serif']
       }
     },
   },

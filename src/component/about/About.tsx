@@ -4,10 +4,10 @@ const About = () => {
   const [tab, setTab] = useState<string>("pixels");
 
   return (
-    <div className="border">
+    <div>
       {/* Quote About Work - Life Balance */}
       <div className="flex justify-center text-center items-center text-4xl font-main w-1/2 mx-auto my-20">
-        " Balancing the lines of code with the contours of life, we craft the digital
+        " Balancing the lines of code with the contours of life, I craft the digital
         canvas of tomorrow while painting the masterpiece of today. "
       </div>
 
@@ -18,15 +18,15 @@ const About = () => {
       is the artistry of a frontend developer. Balancing the lines of code with the contours of life, we blend
       the digital canvas with the colors of living, weaving a masterpiece of work-life harmony. */}
 
-      <div className="flex justify-center items-center text-3xl border-b">
+      <div className="flex justify-center items-center text-3xl">
         <div
-          className="px-32 py-6 border rounded-tl-xl cursor-pointer"
+          className={`px-32 py-6 border rounded-tl-xl cursor-pointer text-accent font-bold`}
           onClick={() => setTab("pixels")}
         >
           Pixels
         </div>
         <div
-          className="px-32 py-6 border rounded-tr-xl cursor-pointer"
+          className={`px-32 py-6 border rounded-tr-xl cursor-pointer text-accent font-bold`}
           onClick={() => setTab("passion")}
         >
           Passion
