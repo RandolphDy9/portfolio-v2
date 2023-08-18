@@ -34,7 +34,7 @@ const MainLayout = ({ darkMode, children }: LayoutType) => {
         </div>
       </div>
 
-      <div className="flex flex-col gap-20 fixed right-0 top-1/3 transform translate-y-1/3 items-center">
+      <div className="flex flex-col gap-24 fixed right-0 top-1/3 transform translate-y-1/3 items-center">
         <div className="">
           <img src={`${darkMode ? EmailWhite : EmailBlack}`} alt="email-icon" width="22" />
         </div>

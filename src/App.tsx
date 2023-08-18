@@ -14,7 +14,7 @@ function App() {
 
   return (
     <>
-      <div className={`min-h-screen h-full ${!darkMode ? 'bg-light text-dark' : 'bg-dark text-white'}`}>
+      <div className={`min-h-screen h-full font-main ${!darkMode ? 'bg-light text-dark' : 'bg-dark text-white'}`}>
         <Navbar
           darkMode={darkMode}
           handleDarkMode={() => setDarkMode(true)}
@@ -27,8 +27,7 @@ function App() {
             <Offer />
             <About />
             <Experience />
-            <Projects />
-            <Projects />
+            <Projects darkMode={darkMode} />
             <Footer darkMode={darkMode} />
           </div>
         </MainLayout>

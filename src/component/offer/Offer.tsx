@@ -13,7 +13,7 @@ const Card = ({ image, title, description }: CardType) => {
       <div className="mx-auto">
         <img src={image} alt="star-icon" className="w-2/6 mx-auto" />
       </div>
-      <GradientText text={title} classes="font-main text-4xl font-bold py-2" />
+      <GradientText text={title} classes="font-main text-5xl font-bold py-2" />
       <div className="font-secondary text-md my-2">{description}</div>
     </div>
   );

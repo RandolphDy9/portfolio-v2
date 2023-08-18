@@ -8,16 +8,20 @@ type CardType = {
   cards: string[];
 };
 
+type BadgeType = {
+  label: string;
+}
+
 const Card = ({ date, company, position, description, cards }: CardType) => {
   return (
     <div className="flex flex-row my-12 md:my-24">
-      <div className="flex flex-col justify-start w-1/3 text-right mx-4 font-secondary">
+      <div className="flex flex-col justify-start w-1/3 text-right mx-4 font-secondary text-xl">
         {date}
       </div>
       <div className="flex flex-col justify-start w-2/3 mx-4">
-        <GradientText text={company} classes="text-4xl font-main font-bold" />
-        <div className="text-lg font-main">{position}</div>
-        <div className="font-secondary">{description}</div>
+        <GradientText text={company} classes="text-5xl font-main font-bold" />
+        <div className="text-xl font-main">{position}</div>
+        <div className="font-secondary my-2">{description}</div>
         <div className="flex gap-2 my-1">
           { cards.map(card => {
             return (
@@ -30,9 +34,9 @@ const Card = ({ date, company, position, description, cards }: CardType) => {
   );
 };
 
-const Badge = ({ label }: { label: string }) => {
+const Badge = ({ label }: BadgeType) => {
   return (
-    <div className="px-3 py-1 font-secondary border border-accent text-accent rounded-lg text-sm">
+    <div className="px-3 py-1 font-secondary border border-accent text-accent rounded-lg text-xs">
       { label }
     </div>
   )

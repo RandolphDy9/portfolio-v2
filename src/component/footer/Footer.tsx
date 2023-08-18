@@ -7,10 +7,10 @@ type FooterType = {
 
 const Footer = ({ darkMode }: FooterType) => {
   return (
-    <div className="py-20 text-center w-1/2 mx-auto font-secondary">
+    <div className="md:py-32 text-center w-1/2 mx-auto font-secondary">
       <div>
-        <GradientText text="Get in Touch" classes="text-5xl mb-4 font-main font-bold" />
-        <div className="text-md">
+        <GradientText text="Get in Touch" classes="text-7xl mb-4 font-main font-bold" />
+        <div className="text-lg">
           Crafted with passion using ReactJS and Tailwind CSS, this portfolio draws
           inspiration from diverse web design concepts. A fusion of creativity
           and code, it showcases my journey as a frontend developer. Explore the
