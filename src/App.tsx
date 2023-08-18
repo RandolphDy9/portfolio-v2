@@ -23,13 +23,13 @@ function App() {
 
         <MainLayout darkMode={darkMode}>
           <div className="flex flex-col w-full">
-            <Hero />
+            <Hero darkMode={darkMode} />
             <Offer />
             <About />
             <Experience />
             <Projects />
             <Projects />
-            <Footer />
+            <Footer darkMode={darkMode} />
           </div>
         </MainLayout>
       </div>

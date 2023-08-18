@@ -6,7 +6,7 @@ const About = () => {
   return (
     <div>
       {/* Quote About Work - Life Balance */}
-      <div className="flex justify-center text-center items-center text-4xl font-main w-1/2 mx-auto my-20">
+      <div className="flex justify-center text-center items-center text-5xl font-main w-1/2 mx-auto my-14">
         " Balancing the lines of code with the contours of life, I craft the digital
         canvas of tomorrow while painting the masterpiece of today. "
       </div>

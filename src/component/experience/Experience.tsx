@@ -1,3 +1,5 @@
+import GradientText from "../shared/GradientText";
+
 type CardType = {
   date: string;
   company: string;
@@ -8,18 +10,18 @@ type CardType = {
 
 const Card = ({ date, company, position, description, cards }: CardType) => {
   return (
-    <div className="flex flex-row my-12 md:my-20">
+    <div className="flex flex-row my-12 md:my-24">
       <div className="flex flex-col justify-start w-1/3 text-right mx-4 font-secondary">
         {date}
       </div>
       <div className="flex flex-col justify-start w-2/3 mx-4">
-        <div className="text-2xl font-main text-accent font-bold">{company}</div>
+        <GradientText text={company} classes="text-4xl font-main font-bold" />
         <div className="text-lg font-main">{position}</div>
         <div className="font-secondary">{description}</div>
         <div className="flex gap-2 my-1">
           { cards.map(card => {
             return (
-              <Badge label={card} />
+              <Badge key={card} label={card} />
             )
           }) }
         </div>
@@ -30,7 +32,7 @@ const Card = ({ date, company, position, description, cards }: CardType) => {
 
 const Badge = ({ label }: { label: string }) => {
   return (
-    <div className="px-3 py-1 font-secondary border border-accent text-accent rounded-lg text-xs">
+    <div className="px-3 py-1 font-secondary border border-accent text-accent rounded-lg text-sm">
       { label }
     </div>
   )

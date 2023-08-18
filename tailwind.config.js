@@ -13,8 +13,9 @@ export default {
         lightPrimary: "#FFFFFF",
         dark: "#171717",
         light: "#F1F1F1",
-        from: "#03A696",
-        to: "#03aa60"
+        from: "#D16BA5",
+        via: "#86A8E7",
+        to: "#5FFBF1"
       },
       fontFamily: {
         'main': ['Poppins', 'sans-serif'],
