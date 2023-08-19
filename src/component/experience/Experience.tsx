@@ -1,4 +1,5 @@
 import GradientText from "../shared/GradientText";
+import RevealAnimation from "../shared/RevealAnimation";
 
 type CardType = {
   date: string;
@@ -19,9 +20,13 @@ const Card = ({ date, company, position, description, cards }: CardType) => {
         {date}
       </div>
       <div className="flex flex-col justify-start w-2/3 mx-4">
-        <GradientText text={company} classes="text-5xl font-main font-bold" />
-        <div className="text-xl font-main">{position}</div>
-        <div className="font-secondary my-2">{description}</div>
+        <RevealAnimation leftToRight={true}>
+          <GradientText text={company} classes="text-5xl font-main font-bold" />
+        </RevealAnimation>
+        <div className="text-xl font-main">
+          <RevealAnimation>{position}</RevealAnimation></div>
+        <div className="font-secondary my-2">
+          <RevealAnimation>{description}</RevealAnimation></div>
         <div className="flex gap-2 my-1">
           { cards.map(card => {
             return (

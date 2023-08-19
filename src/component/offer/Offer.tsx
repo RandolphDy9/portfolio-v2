@@ -1,5 +1,6 @@
 import GradientText from "../shared/GradientText";
 import Star from "../../assets/icons/star.svg";
+import RevealAnimation from "../shared/RevealAnimation";
 
 type CardType = {
   image: string;
@@ -13,15 +14,19 @@ const Card = ({ image, title, description }: CardType) => {
       <div className="mx-auto">
         <img src={image} alt="star-icon" className="w-2/6 mx-auto" />
       </div>
-      <GradientText text={title} classes="font-main text-5xl font-bold py-2" />
-      <div className="font-secondary text-md my-2">{description}</div>
+      <RevealAnimation leftToRight={true}>
+        <GradientText text={title} classes="font-main text-5xl font-bold py-2" />
+      </RevealAnimation>
+      <div className="font-secondary text-md my-2">
+        <RevealAnimation>{description}</RevealAnimation>
+      </div>
     </div>
   );
 };
 
 const Offer = () => {
   return (
-    <div className="my-12 md:my-32 flex flex-col md:flex-row justify-around items-center md:gap-32 px-4 md:px-8">
+    <div className="my-12 md:my-24 flex flex-col md:flex-row justify-around items-center md:gap-32 px-4 md:px-8">
       <Card
         image={Star}
         title="Front-end Development"
