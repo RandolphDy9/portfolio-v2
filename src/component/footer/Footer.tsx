@@ -8,11 +8,11 @@ type FooterType = {
 
 const Footer = ({ darkMode }: FooterType) => {
   return (
-    <div className="md:py-32 text-center w-1/2 mx-auto font-secondary">
+    <div className="pt-24 pb-6 md:py-32 text-center w-full md:w-1/2 mx-auto font-secondary px-6">
       <div>
         <GradientText
           text="Get in Touch"
-          classes="text-7xl mb-3 font-main font-bold"
+          classes="text-4xl md:text-7xl mb-3 font-main font-bold"
         />
         <div className="text-lg my-2 flex-wrap">
           <RevealAnimation>

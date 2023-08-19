@@ -10,14 +10,14 @@ type CardType = {
 
 const Card = ({ image, title, description }: CardType) => {
   return (
-    <div className="flex flex-col justify-center items-center text-center mx-auto w-full md:w-1/3">
+    <div className="flex flex-col justify-center my-2 md:my-0 items-center text-center mx-auto w-full md:w-1/3">
       <div className="mx-auto">
         <img src={image} alt="star-icon" className="w-2/6 mx-auto" />
       </div>
       <RevealAnimation leftToRight={true}>
-        <GradientText text={title} classes="font-main text-5xl font-bold py-2" />
+        <GradientText text={title} classes="font-main text-3xl md:text-5xl font-bold py-2" />
       </RevealAnimation>
-      <div className="font-secondary text-md my-2">
+      <div className="font-secondary text-sm md:text-md my-2">
         <RevealAnimation>{description}</RevealAnimation>
       </div>
     </div>

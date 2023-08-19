@@ -15,11 +15,11 @@ type BadgeType = {
 
 const Card = ({ date, company, position, description, cards }: CardType) => {
   return (
-    <div className="flex flex-row my-12 md:my-24">
-      <div className="flex flex-col justify-start w-1/3 text-right mx-4 font-secondary text-xl">
+    <div className="flex flex-col md:flex-row my-12 md:my-16 p-6">
+      <div className="flex flex-col justify-start w-full md:w-1/3 text-right md:mx-4 font-secondary text-xl">
         {date}
       </div>
-      <div className="flex flex-col justify-start w-2/3 mx-4">
+      <div className="flex flex-col justify-start w-full md:w-2/3 md:mx-4">
         <RevealAnimation leftToRight={true}>
           <GradientText text={company} classes="text-5xl font-main font-bold" />
         </RevealAnimation>
@@ -27,7 +27,7 @@ const Card = ({ date, company, position, description, cards }: CardType) => {
           <RevealAnimation>{position}</RevealAnimation></div>
         <div className="font-secondary my-2">
           <RevealAnimation>{description}</RevealAnimation></div>
-        <div className="flex gap-2 my-1">
+        <div className="flex flex-wrap gap-2 my-1">
           { cards.map(card => {
             return (
               <Badge key={card} label={card} />

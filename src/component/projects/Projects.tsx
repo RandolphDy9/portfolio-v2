@@ -89,8 +89,8 @@ const FeaturedProject = ({
   linkToUrl
 }: FeaturedProjectType) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 md:mb-20">
-      <div className="m-20">
+    <div className="grid grid-cols-1 md:grid-cols-2 mb-12 md:mb-20">
+      <div className="m-6 md:m-20">
         <div>Featured Project</div>
         <RevealAnimation leftToRight={true}>
           <GradientText text={title} classes="text-5xl font-bold" />
@@ -149,10 +149,10 @@ const Projects = ({ darkMode }: ProjectType) => {
         image={Newsfeed}
         linkToUrl="https://steady-figolla-c4e7f2.netlify.app/"
       />
-      <div className="text-5xl text-center md:mt-28 my-12">
+      <div className="text-3xl md:text-5xl text-center md:mt-28 my-16">
         Other notable projects
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-6">
         <Card
           darkMode={darkMode}
           title="Sine TV"

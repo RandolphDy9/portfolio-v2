@@ -10,7 +10,7 @@ const About = ({ darkMode }: { darkMode: boolean }) => {
     <div>
       {/* Quote About Work - Life Balance */}
       <RevealAnimation>
-        <div className="flex justify-center text-center items-center text-7xl font-bold font-main w-full mx-auto my-14 flex-wrap">
+        <div className="flex justify-center text-center items-center text-3xl md:text-7xl font-bold font-main w-full mx-auto md:my-14 flex-wrap">
           Blending precise interfaces and life's moments, a frontend developer
           creates a symphony of code and living, crafting a masterpiece of
           <div className="flex p-4 gap-4 items-center">
@@ -31,11 +31,11 @@ const About = ({ darkMode }: { darkMode: boolean }) => {
       {tab === "work" ? (
         <>
           {/* About Work */}
-          <div className="flex my-6">
-            <div className={`w-1/3 p-4 rounded ${darkMode ? 'bg-gray-700' : 'bg-gray-300'}`}>
+          <div className="flex flex-col md:flex-row my-6">
+            <div className={`w-full md:w-1/3 md:p-4 rounded ${darkMode ? 'bg-gray-700' : 'bg-gray-300'}`}>
               <img src={Work} alt="working" className="object-cover w-full h-full opacity-80" />
             </div>
-            <div className="w-2/3 p-4 overflow-y-scroll">
+            <div className="w-full md:w-2/3 md:p-4 overflow-y-scroll">
               <div className="p-10 font-secondary text-lg">
                 <RevealAnimation>
                   Experienced Front-end Developer with over 5 years of
@@ -72,8 +72,8 @@ const About = ({ darkMode }: { darkMode: boolean }) => {
       ) : (
         <>
           {/* About Life */}
-          <div className="flex my-6">
-            <div className="w-2/3 p-4 overflow-y-scroll">
+          <div className="flex flex-col md:flex-row my-6">
+            <div className="w-full md:w-2/3 md:p-4 overflow-y-scroll">
               <div className="p-10 font-secondary text-lg">
                 <RevealAnimation>
                   Welcome to my corner of the web! I'm thrilled to share a glimpse
@@ -108,7 +108,7 @@ const About = ({ darkMode }: { darkMode: boolean }) => {
                 </RevealAnimation>
               </div>
             </div>
-            <div className={`w-1/3 p-4 rounded ${darkMode ? 'bg-gray-700' : 'bg-gray-300'}`}>
+            <div className={`w-full md:w-1/3 md:p-4 rounded ${darkMode ? 'bg-gray-700' : 'bg-gray-300'}`}>
               <img src={Life} alt="working" className="object-cover w-full h-full opacity-75" />
             </div>
           </div>
