@@ -38,6 +38,7 @@ const Hero = ({ darkMode }: HeroType) => {
             classes={`font-bold text-xl ${
               !darkMode ? "bg-light text-dark" : "bg-dark text-white"
             }`}
+            onClick={() => window.open('mailto:mayson.dy@gmail.com')}
           />
         </div>
       </div>

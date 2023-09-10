@@ -17,7 +17,7 @@ const Card = ({ image, title, description }: CardType) => {
       <RevealAnimation leftToRight={true}>
         <GradientText text={title} classes="font-main text-3xl md:text-5xl font-bold py-2" />
       </RevealAnimation>
-      <div className="font-secondary text-sm md:text-md my-2">
+      <div className="font-secondary text-md md:text-lg my-2">
         <RevealAnimation>{description}</RevealAnimation>
       </div>
     </div>

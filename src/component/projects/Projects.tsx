@@ -86,7 +86,7 @@ const FeaturedProject = ({
   description,
   used,
   image,
-  linkToUrl
+  linkToUrl,
 }: FeaturedProjectType) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 mb-12 md:mb-20">
@@ -104,7 +104,10 @@ const FeaturedProject = ({
           })}
         </div>
       </div>
-      <div className="h-auto w-full cursor-pointer" onClick={() => window.open(linkToUrl)}>
+      <div
+        className="h-auto w-full cursor-pointer"
+        onClick={() => window.open(linkToUrl)}
+      >
         <RevealAnimation rightToLeft={true}>
           <img
             src={image}
@@ -120,6 +123,9 @@ const FeaturedProject = ({
 const Projects = ({ darkMode }: ProjectType) => {
   return (
     <div>
+      <div className="text-3xl md:text-6xl text-center md:mt-12 my-16">
+        Featured projects
+      </div>
       <FeaturedProject
         title="Portfolio v1"
         description="Protfolio version 1 is a pivotal achievement in my web development journey,
@@ -128,7 +134,7 @@ const Projects = ({ darkMode }: ProjectType) => {
           mastering new technologies."
         used={["React", "Tailwind CSS", "Figma"]}
         image={PortfolioV1}
-        linkToUrl="https://chic-biscuit-79f6ea.netlify.app/"
+        linkToUrl="https://protfoliov1-site.netlify.app"
       />
       <FeaturedProject
         title="Tarsier Studios"
@@ -147,21 +153,31 @@ const Projects = ({ darkMode }: ProjectType) => {
           articles from NewsApi, bridging information and innovation."
         used={["React", "Tailwind CSS"]}
         image={Newsfeed}
-        linkToUrl="https://steady-figolla-c4e7f2.netlify.app/"
+        linkToUrl="https://newsfeed-site.netlify.app"
       />
-      <div className="text-3xl md:text-5xl text-center md:mt-28 my-16">
+      <div className="text-3xl md:text-6xl text-center md:mt-28 my-16">
         Other notable projects
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-6">
-        <Card
+        {/* <Card
           darkMode={darkMode}
           title="Sine TV"
           description="Embark on a cinematic journey with sine tv, a dynamic app designed to seamlessly
             fetch movie details from TheMovieDatabaseApi. Whether you're a devoted film buff or simply
             seeking your next on-screen adventure, sine tv provides a gateway to explore, discover,
             and immerse yourself in the world of movies."
-          linkToUrl="https://fantastic-beignet-2a7767.netlify.app/"
+          linkToUrl="https://sinetv-site.netlify.app"
           used={["React", "Tailwind CSS"]}
+        /> */}
+        <Card
+          darkMode={darkMode}
+          title="StaffHub"
+          description="StaffHub is your go-to employee management solution, designed with simplicity and
+            efficiency in mind. Powered by NodeJS for a robust backend and featuring an Angular frontend,
+            it offers an intuitive platform for managing your workforce. With StaffHub, you can easily Create,
+            Read, Update, and Delete (CRUD) employee data, making workforce management a breeze."
+          linkToUrl="https://staffhub-site.netlify.app"
+          used={["Angular", "Tailwind CSS", "NodeJS"]}
         />
         <Card
           darkMode={darkMode}

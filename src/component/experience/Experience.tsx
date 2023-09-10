@@ -50,6 +50,9 @@ const Badge = ({ label }: BadgeType) => {
 const Experience = () => {
   return (
     <div>
+      <div className="text-3xl md:text-6xl text-center md:mt-28 my-16">
+        Work Experience
+      </div>
       <Card
         date="August 2018 - Present"
         company="Exist Software Labs, Inc."
@@ -65,7 +68,7 @@ const Experience = () => {
         position="Frontend Developer • Part time"
         description="Writing well-structured, modular, and maintainable code using best
         practices and following coding standards. Working with React to develop web apps."
-        cards={["ReactJS", "Tailwind CSS", "Webflow", "TypeScript", "Ionic", "Bootstrap"]}
+        cards={["ReactJS", "Tailwind CSS", "Webflow", "TypeScript", "Bootstrap", "NodeJS", "MongoDB"]}
       />
       <Card
         date="June 2021 - Sep 2021"
@@ -76,6 +79,19 @@ const Experience = () => {
         collaborating closely with the team, and documenting bug tickets or any code changes."
         cards={["Angular", "Angular Material", "Firebase", "Bootstrap"]}
       />
+
+      {/* <div className="text-3xl md:text-6xl text-center md:mt-28 my-16">
+        Volunteer Experience
+      </div>
+      <Card
+        date="January 2023 - Present"
+        company="DEVCON Cebu"
+        position="Angular Developer • Freelance"
+        description="Development of responsive and reusable features for FunnelCone’s web
+        content management system. Bringing mock-ups to life using Angular framework,
+        collaborating closely with the team, and documenting bug tickets or any code changes."
+        cards={["Angular", "Angular Material", "Firebase", "Bootstrap"]}
+      /> */}
     </div>
   );
 };

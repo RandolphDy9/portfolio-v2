@@ -36,7 +36,7 @@ const Navbar = ({ darkMode, handleDarkMode }: NavbarType) => {
           </div>
         </div>
 
-        <div className="cursor-pointer" onClick={() => window.open('https://www.dropbox.com/s/xakoe6rop7xc4aj/RandolphDy_resume.pdf?dl=0')}>
+        <div className="cursor-pointer" onClick={() => window.open('https://www.dropbox.com/scl/fi/gsrfko04raorw35025zwo/Resume-Randolph-Dy.pdf?rlkey=g2gs6e3sp5809u4s6ks4aw3il&dl=0')}>
           <ButtonGradient
             label="Resume"
             classes={`font-bold ${
