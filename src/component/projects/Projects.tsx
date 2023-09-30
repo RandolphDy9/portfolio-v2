@@ -223,10 +223,8 @@ const Projects = ({ darkMode }: ProjectType) => {
         <Card
           darkMode={darkMode}
           title="Markdown Previewer"
-          description="This project enables users to create, edit, and preview formatted content using Markdown,
-            a lightweight markup language. By seamlessly translating Markdown syntax into beautifully formatted
-            HTML output, this application empowers users to focus on content creation without the distractions
-            of complex formatting."
+          description="This project empowers users to create, edit, and preview content using Markdown,
+            simplifying formatting to enhance content creation"
           linkToUrl="https://codepen.io/Randolph-Mayson-Dy/full/wvQxmVJ"
           used={["React", "Bootstrap", "HTML5", "CSS3"]}
         />
