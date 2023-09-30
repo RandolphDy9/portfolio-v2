@@ -10,7 +10,7 @@ const About = ({ darkMode }: { darkMode: boolean }) => {
     <div>
       {/* Quote About Work - Life Balance */}
       <RevealAnimation>
-        <div className="flex justify-center text-center items-center text-3xl md:text-7xl font-bold font-main w-full mx-auto md:my-14 flex-wrap">
+        <div className="flex justify-center text-center items-center text-3xl md:text-7xl font-semibold font-main w-full mx-auto md:my-14 flex-wrap">
           Blending precise interfaces and life's moments, a frontend developer
           creates a symphony of code and living, crafting a masterpiece of
           <div className="flex p-4 gap-4 items-center">

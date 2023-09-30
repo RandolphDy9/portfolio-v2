@@ -7,7 +7,9 @@ import RevealAnimation from "../shared/RevealAnimation";
 
 import PortfolioV1 from "../../assets/images/projects/portfolio-v1.png";
 import TarsierStudios from "../../assets/images/projects/tarsier-studios.png";
-import Newsfeed from "../../assets/images/projects/newsfeed.png";
+import Drape from "../../assets/images/projects/drape.png";
+
+import Tilt from 'react-parallax-tilt';
 
 type ProjectType = {
   darkMode: boolean;
@@ -43,11 +45,11 @@ const Badge = ({ label }: BadgeType) => {
 
 const Card = ({ darkMode, title, description, linkToUrl, used }: CardType) => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col flex-grow">
       <RevealAnimation>
         <div className="flex-1 p-0.5 my-auto rounded bg-gradient-to-r from-from via-via to-to h-full md:h-96">
           <div
-            className={`p-6 flex flex-col flex-1 gap-2 h-full ${
+            className={`p-8 flex flex-col flex-1 gap-2 h-full ${
               darkMode ? "bg-dark text-white" : "bg-light text-dark"
             }`}
           >
@@ -59,7 +61,7 @@ const Card = ({ darkMode, title, description, linkToUrl, used }: CardType) => {
                   width="35"
                 />
               </div>
-              <div onClick={() => window.open(linkToUrl)}>
+              <div className="cursor-pointer hover:scale-110" onClick={() => window.open(linkToUrl)}>
                 <img
                   src={`${darkMode ? LinkWhite : LinkBlack}`}
                   alt="external-link"
@@ -90,7 +92,7 @@ const FeaturedProject = ({
 }: FeaturedProjectType) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 mb-12 md:mb-20">
-      <div className="m-6 md:m-20">
+      <div className="m-6 md:m-20 flex flex-col justify-center">
         <div>Featured Project</div>
         <RevealAnimation leftToRight={true}>
           <GradientText text={title} classes="text-5xl font-bold" />
@@ -109,11 +111,13 @@ const FeaturedProject = ({
         onClick={() => window.open(linkToUrl)}
       >
         <RevealAnimation rightToLeft={true}>
-          <img
-            src={image}
-            alt="featured-project"
-            className="object-cover w-full"
-          />
+          <Tilt tiltAngleXInitial={20} tiltAngleYInitial={20}>
+            <img
+              src={image}
+              alt="featured-project"
+              className="object-cover w-full py-8 shadow-purple-700 shadow-2xl"
+            />
+          </Tilt>
         </RevealAnimation>
       </div>
     </div>
@@ -147,6 +151,17 @@ const Projects = ({ darkMode }: ProjectType) => {
         linkToUrl="https://tarsier-studios.webflow.io/"
       />
       <FeaturedProject
+        title="Drape"
+        description="Drape is your go-to destination for contemporary fashion. Our sleek and modern
+          website, built using React and Tailwind CSS, offers a seamless shopping experience with convenient
+          'add to cart' functionality. Explore our curated collection of stylish clothing and elevate your
+          wardrobe effortlessly with Drape."
+        used={["React", "Tailwind CSS"]}
+        image={Drape}
+        linkToUrl="https://drape-clothing.netlify.app/"
+      />
+
+      {/* <FeaturedProject
         title="Newsfeed"
         description="Crafted with React and influenced by the artistic spirit of Dribbble, this endeavor
           seamlessly blends functionality and aesthetics. Newsfeed is a curated portal to the latest 
@@ -154,11 +169,11 @@ const Projects = ({ darkMode }: ProjectType) => {
         used={["React", "Tailwind CSS"]}
         image={Newsfeed}
         linkToUrl="https://newsfeed-site.netlify.app"
-      />
+      /> */}
       <div className="text-3xl md:text-6xl text-center md:mt-28 my-16">
         Other notable projects
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-6">
         {/* <Card
           darkMode={darkMode}
           title="Sine TV"
@@ -172,12 +187,20 @@ const Projects = ({ darkMode }: ProjectType) => {
         <Card
           darkMode={darkMode}
           title="StaffHub"
-          description="StaffHub is your go-to employee management solution, designed with simplicity and
-            efficiency in mind. Powered by NodeJS for a robust backend and featuring an Angular frontend,
-            it offers an intuitive platform for managing your workforce. With StaffHub, you can easily Create,
-            Read, Update, and Delete (CRUD) employee data, making workforce management a breeze."
+          description="StaffHub simplifies employee management, combining a robust NodeJS backend with an
+            intuitive Angular frontend. It streamlines workforce management, enabling effortless CRUD
+            operations for employee data."
           linkToUrl="https://staffhub-site.netlify.app"
           used={["Angular", "Tailwind CSS", "NodeJS"]}
+        />
+        <Card
+          darkMode={darkMode}
+          title="Newsfeed"
+          description="Crafted with React and influenced by the artistic spirit of Dribbble, this endeavor
+            seamlessly blends functionality and aesthetics. Newsfeed is a curated portal to the latest 
+            articles from NewsApi, bridging information and innovation."
+          linkToUrl="https://newsfeed-site.netlify.app"
+          used={["React", "Tailwind CSS"]}
         />
         <Card
           darkMode={darkMode}
@@ -192,9 +215,8 @@ const Projects = ({ darkMode }: ProjectType) => {
           darkMode={darkMode}
           title="Random Quote Generator"
           description="The Random Quote Generator is an engaging and interactive web application developed
-            as part of the freeCodeCamp challenges. This project offers users a delightful experience by
-            presenting them with thought-provoking and inspiring quotes in a random order every time
-            they visit the website."
+            as part of the freeCodeCamp challenges providing users with thought-provoking and inspiring
+            quotes in a random order every time they visit the website."
           linkToUrl="https://codepen.io/Randolph-Mayson-Dy/full/gOQzJVb"
           used={["React", "Bootstrap", "HTML5", "CSS3"]}
         />
@@ -217,7 +239,7 @@ const Projects = ({ darkMode }: ProjectType) => {
           linkToUrl="https://codepen.io/Randolph-Mayson-Dy/full/OJaBJLd"
           used={["React", "Bootstrap", "HTML5", "CSS3"]}
         />
-        <Card
+        {/* <Card
           darkMode={darkMode}
           title="Drumpad"
           description="Inspired by electronic drum machines, this project allows users to unleash their inner
@@ -226,7 +248,7 @@ const Projects = ({ darkMode }: ProjectType) => {
           the Drumpad offers an engaging experience for users of all ages."
           linkToUrl="https://codepen.io/Randolph-Mayson-Dy/full/NWELqGO"
           used={["React", "Bootstrap", "HTML5", "CSS3"]}
-        />
+        /> */}
       </div>
     </div>
   );

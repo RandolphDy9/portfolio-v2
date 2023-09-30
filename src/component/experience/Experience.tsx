@@ -16,7 +16,7 @@ type BadgeType = {
 const Card = ({ date, company, position, description, cards }: CardType) => {
   return (
     <div className="flex flex-col md:flex-row my-12 md:my-16 p-6">
-      <div className="flex flex-col justify-start w-full md:w-1/3 text-right md:mx-4 font-secondary text-xl">
+      <div className="flex flex-col justify-start w-full md:w-1/3 text-left md:text-right md:mx-4 font-secondary text-xl">
         {date}
       </div>
       <div className="flex flex-col justify-start w-full md:w-2/3 md:mx-4">
