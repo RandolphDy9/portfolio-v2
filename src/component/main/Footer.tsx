@@ -1,4 +1,4 @@
-import ButtonGradient from "../shared/ButtonGradient";
+import ButtonFill from "../shared/ButtonFill";
 import GradientText from "../shared/GradientText";
 import RevealAnimation from "../shared/RevealAnimation";
 
@@ -8,13 +8,13 @@ type FooterType = {
 
 const Footer = ({ darkMode }: FooterType) => {
   return (
-    <div className="pt-24 pb-6 md:py-32 text-center w-full md:w-1/2 mx-auto font-secondary px-6">
+    <div className="pt-24 pb-6 md:py-32 text-center w-full md:w-5/6 mx-auto font-secondary px-6">
       <div>
         <GradientText
-          text="Get in Touch"
-          classes="text-4xl md:text-7xl mb-3 font-main font-bold"
+          text="Let's Make Great Work Together"
+          classes="text-6xl md:text-8xl pb-4 font-main font-bold"
         />
-        <div className="text-lg my-2 flex-wrap">
+        <div className="text-lg py-4 flex-wrap md:w-1/2 mx-auto">
           <RevealAnimation>
             Got a cool idea or project?
             Let's connect and make it a reality. Feel free to drop me a message,
@@ -29,10 +29,13 @@ const Footer = ({ darkMode }: FooterType) => {
           </RevealAnimation> */}
         </div>
         <div className="mx-auto flex justify-center my-4">
-          <ButtonGradient
+          <ButtonFill
             label="Say Hello!"
-            classes={`font-bold text-xl ${
-              !darkMode ? "bg-light text-dark" : "bg-dark text-white"
+            absoluteClasses={`${
+              !darkMode ? "bg-dark" : "bg-[#aaa]"
+            }`}
+            relativeClasses={`${
+              !darkMode ? "border-dark bg-white text-dark" : "border-white bg-dark text-white"
             }`}
             onClick={() => window.open("mailto:mayson.dy@gmail.com")}
           />

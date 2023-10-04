@@ -10,6 +10,7 @@ import TarsierStudios from "../../assets/images/projects/tarsier-studios.png";
 import Drape from "../../assets/images/projects/drape.png";
 
 import Tilt from 'react-parallax-tilt';
+import { useNavigate } from "react-router";
 
 type ProjectType = {
   darkMode: boolean;
@@ -125,6 +126,8 @@ const FeaturedProject = ({
 };
 
 const Projects = ({ darkMode }: ProjectType) => {
+  const navigate = useNavigate();
+
   return (
     <div>
       <div className="text-3xl md:text-6xl text-center md:mt-12 my-16">
@@ -247,6 +250,9 @@ const Projects = ({ darkMode }: ProjectType) => {
           linkToUrl="https://codepen.io/Randolph-Mayson-Dy/full/NWELqGO"
           used={["React", "Bootstrap", "HTML5", "CSS3"]}
         /> */}
+      </div>
+      <div className="text-lg md:text-xl text-center my-8 hover:underline cursor-pointer" onClick={() => navigate('/archive')}>
+        View all projects &#8594;
       </div>
     </div>
   );

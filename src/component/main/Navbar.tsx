@@ -1,8 +1,7 @@
 import Moon from "../../assets/icons/light/moon.svg";
 import Sun from "../../assets/icons/dark/sun.svg";
-import ButtonGradient from "../shared/ButtonGradient";
-// import GradientText from "../shared/GradientText";
 import { motion } from "framer-motion";
+import ButtonFill from "../shared/ButtonFill";
 
 type NavbarType = {
   darkMode: boolean;
@@ -36,12 +35,16 @@ const Navbar = ({ darkMode, handleDarkMode }: NavbarType) => {
           </div>
         </div>
 
-        <div className="cursor-pointer" onClick={() => window.open('https://www.dropbox.com/scl/fi/gsrfko04raorw35025zwo/Resume-Randolph-Dy.pdf?rlkey=g2gs6e3sp5809u4s6ks4aw3il&dl=0')}>
-          <ButtonGradient
+        <div className="cursor-pointer">
+          <ButtonFill
             label="Resume"
-            classes={`font-bold ${
-              !darkMode ? "bg-light text-dark" : "bg-dark text-white"
+            absoluteClasses={`${
+              !darkMode ? "bg-dark" : "bg-[#aaa]"
             }`}
+            relativeClasses={`${
+              !darkMode ? "border-dark bg-white text-dark" : "border-white bg-dark text-white"
+            }`}
+            onClick={() => window.open('https://www.dropbox.com/scl/fi/gsrfko04raorw35025zwo/Resume-Randolph-Dy.pdf?rlkey=g2gs6e3sp5809u4s6ks4aw3il&dl=0')}
           />
         </div>
       </div>

@@ -1,1 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;700&display=swap');
+
+.blur-blue {
+  /* background: #86A8E7; */
+  background: radial-gradient(circle 500px, #86A8E7, transparent);
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  width: 30rem;
+  height: 45rem;
+  top: 0;
+  right: 0;
+}
+
+.blur-purple {
+  /* background: #86A8E7; */
+  background: radial-gradient(circle 380px, #D16BA5, transparent);
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  width: 30rem;
+  height: 20rem;
+  top: 40rem;
+  left: 20rem;
+}
