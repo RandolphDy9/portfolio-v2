@@ -14,7 +14,7 @@ const Card = ({ label, title, description }: CardType) => {
         { label }
       </div>
       <RevealAnimation leftToRight={true}>
-        <GradientText text={title} classes="font-main text-3xl md:text-5xl font-bold py-2" />
+        <GradientText text={title} classes="font-main text-2xl md:text-4xl font-bold py-2" />
       </RevealAnimation>
       <div className="font-secondary text-lg md:text-xl my-2">
         <RevealAnimation>{description}</RevealAnimation>
@@ -25,7 +25,7 @@ const Card = ({ label, title, description }: CardType) => {
 
 const Offer = () => {
   return (
-    <div className="my-6 flex flex-col md:flex-row justify-around items-center md:gap-32 px-4 md:px-8">
+    <div className="my-6 flex flex-col md:flex-row justify-around items-center md:gap-32 px-4 md:px-10 md:mt-16">
       <Card
         label=".01"
         title="Front-end Development"

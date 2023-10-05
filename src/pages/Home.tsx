@@ -9,18 +9,19 @@ import Projects from "../component/main/Projects";
 import MainLayout from "../layout/MainLayout";
 import Lottie from "lottie-react";
 import animationData from "../assets/lottie/water.json";
+import About from "../component/main/About";
 
 const Home = () => {
 
   const [darkMode, setDarkMode] = useState<boolean>(true);
-  const [isAppVisible, setIsAppVisible] = useState(false);
+  const [isAppVisible, setIsAppVisible] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsAppVisible(true);
-    }, 6000);
+    // const timer = setTimeout(() => {
+    //   setIsAppVisible(true);
+    // }, 6000);
 
-    return () => clearTimeout(timer); // Clear the timer if the component unmounts
+    // return () => clearTimeout(timer); // Clear the timer if the component unmounts
   }, []);
 
   return (
@@ -40,7 +41,7 @@ const Home = () => {
               <div className="flex flex-col w-full">
                 <Hero darkMode={darkMode} />
                 <Offer />
-                {/* <About darkMode={darkMode} /> */}
+                <About darkMode={darkMode} />
                 <Experience />
                 <Projects darkMode={darkMode} />
                 <Footer darkMode={darkMode} />

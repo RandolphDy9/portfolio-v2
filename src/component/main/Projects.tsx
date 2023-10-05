@@ -129,7 +129,7 @@ const Projects = ({ darkMode }: ProjectType) => {
   const navigate = useNavigate();
 
   return (
-    <div>
+    <div id="projects-section">
       <div className="text-3xl md:text-6xl text-center md:mt-12 my-16">
         Featured projects
       </div>
@@ -176,7 +176,7 @@ const Projects = ({ darkMode }: ProjectType) => {
       <div className="text-3xl md:text-6xl text-center md:mt-28 my-16">
         Other notable projects
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-6 md:px-10">
         {/* <Card
           darkMode={darkMode}
           title="Sine TV"
