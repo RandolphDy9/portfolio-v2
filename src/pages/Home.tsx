@@ -1,20 +1,16 @@
 import { useState, useEffect } from "react";
-// import About from "../component/main/About";
-import Experience from "./Experience";
 import Footer from "../component/main/Footer";
 import Hero from "../component/main/Hero";
-import Navbar from "../component/main/Navbar";
 import Offer from "../component/main/Offer";
 import Projects from "../component/main/Projects";
 import MainLayout from "../layout/MainLayout";
 import Lottie from "lottie-react";
 import animationData from "../assets/lottie/water.json";
-import About from "../component/main/About";
 
 const Home = ({ darkMode }: { darkMode: boolean }) => {
 
   // const [darkMode, setDarkMode] = useState<boolean>(true);
-  const [isAppVisible, setIsAppVisible] = useState(true);
+  const [isAppVisible, ] = useState(true);
 
   useEffect(() => {
     // const timer = setTimeout(() => {

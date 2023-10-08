@@ -1,8 +1,6 @@
-import ButtonGradient from "../shared/ButtonGradient";
 import GradientText from "../shared/GradientText";
 import RevealAnimation from "../shared/RevealAnimation";
 import Dop from "../../assets/images/updated-canva-ai-me.svg";
-// import Dop from "../../assets/images/ai-me-original.jpg";
 import Wave from "../../assets/images/waving.png";
 import Point from "../../assets/images/point.png";
 import ButtonFill from "../shared/ButtonFill";
