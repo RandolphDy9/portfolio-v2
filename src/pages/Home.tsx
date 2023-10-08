@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 // import About from "../component/main/About";
-import Experience from "../component/main/Experience";
+import Experience from "./Experience";
 import Footer from "../component/main/Footer";
 import Hero from "../component/main/Hero";
 import Navbar from "../component/main/Navbar";
@@ -11,9 +11,9 @@ import Lottie from "lottie-react";
 import animationData from "../assets/lottie/water.json";
 import About from "../component/main/About";
 
-const Home = () => {
+const Home = ({ darkMode }: { darkMode: boolean }) => {
 
-  const [darkMode, setDarkMode] = useState<boolean>(true);
+  // const [darkMode, setDarkMode] = useState<boolean>(true);
   const [isAppVisible, setIsAppVisible] = useState(true);
 
   useEffect(() => {
@@ -32,17 +32,12 @@ const Home = () => {
       >
         {isAppVisible ? (
           <div className="z-10">
-            <Navbar
-              darkMode={darkMode}
-              handleDarkMode={() => setDarkMode(!darkMode)}
-            />
-
             <MainLayout darkMode={darkMode}>
               <div className="flex flex-col w-full">
                 <Hero darkMode={darkMode} />
-                <Offer />
-                <About darkMode={darkMode} />
-                <Experience />
+                <Offer darkMode={darkMode} />
+                {/* <About darkMode={darkMode} /> */}
+                {/* <Experience /> */}
                 <Projects darkMode={darkMode} />
                 <Footer darkMode={darkMode} />
               </div>

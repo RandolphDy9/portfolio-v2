@@ -9,8 +9,12 @@ import PortfolioV1 from "../../assets/images/projects/portfolio-v1.png";
 import TarsierStudios from "../../assets/images/projects/tarsier-studios.png";
 import Drape from "../../assets/images/projects/drape.png";
 
-import Tilt from 'react-parallax-tilt';
+import Video1 from "../../assets/videos/portfolio1.mp4";
+import Video2 from "../../assets/videos/tarsier.mp4";
+import Video3 from "../../assets/videos/drape.mp4";
+
 import { useNavigate } from "react-router";
+import { useState } from "react";
 
 type ProjectType = {
   darkMode: boolean;
@@ -33,6 +37,7 @@ type FeaturedProjectType = {
   description: string;
   used: string[];
   image: string;
+  video: string;
   linkToUrl: string;
 };
 
@@ -62,7 +67,10 @@ const Card = ({ darkMode, title, description, linkToUrl, used }: CardType) => {
                   width="35"
                 />
               </div>
-              <div className="cursor-pointer hover:scale-110" onClick={() => window.open(linkToUrl)}>
+              <div
+                className="cursor-pointer hover:scale-110"
+                onClick={() => window.open(linkToUrl)}
+              >
                 <img
                   src={`${darkMode ? LinkWhite : LinkBlack}`}
                   alt="external-link"
@@ -89,8 +97,11 @@ const FeaturedProject = ({
   description,
   used,
   image,
+  video,
   linkToUrl,
 }: FeaturedProjectType) => {
+  const [isVideoPlaying, setVideoPlaying] = useState(false);
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 mb-12 md:mb-20">
       <div className="m-6 md:m-20 flex flex-col justify-center">
@@ -112,13 +123,25 @@ const FeaturedProject = ({
         onClick={() => window.open(linkToUrl)}
       >
         <RevealAnimation rightToLeft={true}>
-          <Tilt tiltAngleXInitial={20} tiltAngleYInitial={20}>
+          {!isVideoPlaying && (
             <img
               src={image}
               alt="featured-project"
               className="object-cover w-full py-8 shadow-purple-700 shadow-2xl"
+              onMouseEnter={() => setVideoPlaying(true)}
             />
-          </Tilt>
+          )}
+
+          {isVideoPlaying && (
+            <video
+              src={video}
+              autoPlay
+              loop
+              muted
+              className="object-cover w-full py-8 shadow-purple-700 shadow-2xl"
+              onMouseLeave={() => setVideoPlaying(false)}
+            />
+          )}
         </RevealAnimation>
       </div>
     </div>
@@ -141,6 +164,7 @@ const Projects = ({ darkMode }: ProjectType) => {
           mastering new technologies."
         used={["React", "Tailwind CSS", "Figma"]}
         image={PortfolioV1}
+        video={Video1}
         linkToUrl="https://protfoliov1-site.netlify.app"
       />
       <FeaturedProject
@@ -151,6 +175,7 @@ const Projects = ({ darkMode }: ProjectType) => {
           Tarsier Studios' digital presence."
         used={["Webflow", "Figma"]}
         image={TarsierStudios}
+        video={Video2}
         linkToUrl="https://tarsier-studios.webflow.io/"
       />
       <FeaturedProject
@@ -161,6 +186,7 @@ const Projects = ({ darkMode }: ProjectType) => {
           wardrobe effortlessly with Drape."
         used={["React", "Tailwind CSS"]}
         image={Drape}
+        video={Video3}
         linkToUrl="https://drape-clothing.netlify.app/"
       />
 
@@ -190,68 +216,50 @@ const Projects = ({ darkMode }: ProjectType) => {
         <Card
           darkMode={darkMode}
           title="StaffHub"
-          description="StaffHub simplifies employee management, combining a robust NodeJS backend with an
-            intuitive Angular frontend. It streamlines workforce management, enabling effortless CRUD
-            operations for employee data."
+          description="StaffHub streamlines employee management with NodeJS backend and intuitive Angular frontend, simplifying workforce data operations."
           linkToUrl="https://staffhub-site.netlify.app"
           used={["Angular", "Tailwind CSS", "NodeJS"]}
         />
         <Card
           darkMode={darkMode}
           title="Newsfeed"
-          description="Crafted with React and influenced by the artistic spirit of Dribbble, this endeavor
-            seamlessly blends functionality and aesthetics. Newsfeed is a curated portal to the latest 
-            articles from NewsApi, bridging information and innovation."
+          description="Influenced by Dribbble's artistry, Newsfeed harmoniously unites React's functionality with creative aesthetic innovation."
           linkToUrl="https://newsfeed-site.netlify.app"
           used={["React", "Tailwind CSS"]}
         />
         <Card
           darkMode={darkMode}
           title="JavaScript Calculator"
-          description="Conceived as part of the freeCodeCamp challenges, this project showcases my ability
-            to blend logic and user interface design to create a functional and interactive calculator
-            that harnesses the power of JavaScript."
+          description="A freeCodeCamp challenge, this project highlights my logic and UI skills, crafting a JavaScript-powered interactive calculator."
           linkToUrl="https://codepen.io/Randolph-Mayson-Dy/full/VwVBXow"
           used={["React", "Bootstrap", "HTML5", "CSS3"]}
         />
         <Card
           darkMode={darkMode}
           title="Random Quote Generator"
-          description="The Random Quote Generator is an engaging and interactive web application developed
-            as part of the freeCodeCamp challenges providing users with thought-provoking and inspiring
-            quotes in a random order every time they visit the website."
+          description="Developed as a freeCodeCamp challenge, the Random Quote Generator provides ever-changing, engaging inspiration."
           linkToUrl="https://codepen.io/Randolph-Mayson-Dy/full/gOQzJVb"
           used={["React", "Bootstrap", "HTML5", "CSS3"]}
         />
         <Card
           darkMode={darkMode}
           title="Markdown Previewer"
-          description="This project empowers users to create, edit, and preview content using Markdown,
-            simplifying formatting to enhance content creation"
+          description="This project empowers users to create, edit, and preview content using Markdown, streamlining formatting for content creation."
           linkToUrl="https://codepen.io/Randolph-Mayson-Dy/full/wvQxmVJ"
           used={["React", "Bootstrap", "HTML5", "CSS3"]}
         />
         <Card
           darkMode={darkMode}
           title="Pomodoro Timer"
-          description="Inspired by the Pomodoro Technique, this project provides users with a focused and
-            structured approach to managing their time and tasks. By alternating between focused work sessions
-            and short breaks, users can optimize their productivity and maintain a healthy work-life balance."
+          description="Inspired by Pomodoro, this project offers focused time management for enhanced productivity and balance."
           linkToUrl="https://codepen.io/Randolph-Mayson-Dy/full/OJaBJLd"
           used={["React", "Bootstrap", "HTML5", "CSS3"]}
         />
-        {/* <Card
-          darkMode={darkMode}
-          title="Drumpad"
-          description="Inspired by electronic drum machines, this project allows users to unleash their inner
-          rhythm and creativity by playing a variety of virtual drum sounds with the click of a mouse or the tap
-          of a keyboard key. Whether you're a music enthusiast or simply looking for a fun way to explore sound,
-          the Drumpad offers an engaging experience for users of all ages."
-          linkToUrl="https://codepen.io/Randolph-Mayson-Dy/full/NWELqGO"
-          used={["React", "Bootstrap", "HTML5", "CSS3"]}
-        /> */}
       </div>
-      <div className="text-lg md:text-xl text-center my-8 hover:underline cursor-pointer" onClick={() => navigate('/archive')}>
+      <div
+        className="text-lg md:text-xl text-center my-8 hover:underline cursor-pointer"
+        onClick={() => navigate("/archive")}
+      >
         View all projects &#8594;
       </div>
     </div>

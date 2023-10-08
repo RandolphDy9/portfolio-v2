@@ -30,7 +30,7 @@ const Footer = ({ darkMode }: FooterType) => {
         </div>
         <div className="mx-auto flex justify-center my-4">
           <ButtonFill
-            label="Say Hello!"
+            label="Get in Touch!"
             absoluteClasses={`${
               !darkMode ? "bg-dark" : "bg-[#aaa]"
             }`}
