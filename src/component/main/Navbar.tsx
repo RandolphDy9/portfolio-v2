@@ -94,7 +94,7 @@ const Navbar = ({ darkMode, handleDarkMode }: NavbarType) => {
               }`}
               onClick={() =>
                 window.open(
-                  "https://www.dropbox.com/scl/fi/4bj0999gz4gfjjfkve64q/Resume-Randolph-Dy.pdf?rlkey=25tsea25jmo0s1724xerws5g2&dl=0"
+                  "https://drive.google.com/drive/folders/1muDwD3DNYfMC2FpflzevrwFU4MO74eHt"
                 )
               }
             />
