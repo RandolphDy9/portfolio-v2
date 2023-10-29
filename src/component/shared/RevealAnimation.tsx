@@ -3,7 +3,7 @@ import { motion, useAnimation, useInView } from "framer-motion";
 
 type Props = {
   children: ReactNode;
-  width?: "fit-content" | "100%";
+  width?: "fit-content" | "auto" | "100%";
   hasGreenBlock?: boolean;
   leftToRight?: boolean;
   rightToLeft?: boolean;
@@ -11,7 +11,7 @@ type Props = {
 
 const RevealAnimation = ({
   children,
-  width = "fit-content",
+  width = "auto",
   hasGreenBlock,
   leftToRight,
   rightToLeft

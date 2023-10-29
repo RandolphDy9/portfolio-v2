@@ -51,7 +51,7 @@ const Badge = ({ label }: BadgeType) => {
 
 const Card = ({ darkMode, title, description, linkToUrl, used }: CardType) => {
   return (
-    <div className="flex flex-col flex-grow">
+    <div className="flex flex-col flex-grow w-auto">
       <RevealAnimation>
         <div className="flex-1 p-0.5 my-auto rounded bg-gradient-to-r from-from via-via to-to h-full md:h-96">
           <div
@@ -256,8 +256,9 @@ const Projects = ({ darkMode }: ProjectType) => {
           used={["React", "Bootstrap", "HTML5", "CSS3"]}
         />
       </div>
+
       <div
-        className="text-lg md:text-xl text-center my-8 hover:underline cursor-pointer"
+        className="text-lg md:text-xl text-center mx-auto my-8 cursor-pointer relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-via after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
         onClick={() => navigate("/archive")}
       >
         View all projects &#8594;

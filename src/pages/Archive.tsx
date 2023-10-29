@@ -12,7 +12,7 @@ type RowType = {
 
 const Row = (item: RowType) => {
   return (
-    <div className="grid grid-cols-3 md:grid-cols-12 mt-2 text-lg md:text-xl hover:bg-via hover:text-dark hover:rounded-xl p-4">
+    <div className="grid md:grid-cols-12 mt-2 text-lg md:text-xl hover:bg-via hover:text-dark hover:rounded-xl p-2 md:p-4">
       <div className="grid md:col-span-1 my-auto">{item.year}</div>
       <div className="grid md:col-span-4 my-auto font-semibold">{item.title}</div>
       <div className="grid md:col-span-2 my-auto">{item.built}</div>
@@ -44,19 +44,25 @@ const Archive = ({ darkMode }: { darkMode: boolean }) => {
       <MainLayout darkMode={darkMode}>
         <div className="flex flex-col w-full m-6 md:m-12">
           <div
-            className="cursor-pointer hover:underline hover:underline-offset-2"
+            className="mb-2 cursor-pointer relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-via after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
             onClick={() => navigate("/")}
           >
             &#8592; Randolph Dy
           </div>
           <div className="text-5xl">All Projects</div>
-          <div className="grid grid-cols-3 md:grid-cols-12 mt-20 text-from px-4 font-bold">
+
+          <div className="text-5xl md:text-6xl text-center md:mt-28 my-16">
+            Archive
+          </div>
+
+          <div className="md:grid md:grid-cols-12 mt-20 text-from px-4 font-bold md:show hidden">
             <div className="grid md:col-span-1">Year</div>
             <div className="grid md:col-span-4">Title</div>
             <div className="grid md:col-span-2">Built at</div>
             <div className="grid md:col-span-5">Developed using</div>
             {/* <div className="grid md:col-span-1">Link</div> */}
           </div>
+
           {experienceData.map((item) => {
             return (
               <Row

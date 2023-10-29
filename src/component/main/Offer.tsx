@@ -28,7 +28,7 @@ const Card = ({ label, title, description, darkMode }: CardType) => {
 
 const Offer = ({ darkMode }: { darkMode: boolean }) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 my-6 gap-12 px-4 md:px-10 md:mb-12">
+    <div className="grid grid-cols-1 md:grid-cols-3 my-6 md:gap-12 px-4 md:px-10 md:mb-12">
       <Card
         label=".01"
         title="Front-end Development"

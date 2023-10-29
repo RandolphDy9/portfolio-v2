@@ -50,11 +50,11 @@ const Hero = ({ darkMode }: HeroType) => {
         <div className="flex flex-row my-4">
           <ButtonFill
             label="Contact Me"
-            absoluteClasses={`${
-              !darkMode ? "bg-dark" : "bg-[#aaa]"
-            }`}
+            absoluteClasses={`${!darkMode ? "bg-dark" : "bg-white"}`}
             relativeClasses={`${
-              !darkMode ? "border-dark bg-white text-dark" : "border-white bg-dark text-white"
+              !darkMode
+                ? "border-dark bg-white text-white"
+                : "border-white bg-dark text-dark"
             }`}
             onClick={() => window.open("mailto:mayson.dy@gmail.com")} />
         </div>

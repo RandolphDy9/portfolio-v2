@@ -1,24 +1,11 @@
-import { useState, useEffect } from "react";
 import Footer from "../component/main/Footer";
 import Hero from "../component/main/Hero";
 import Offer from "../component/main/Offer";
 import Projects from "../component/main/Projects";
 import MainLayout from "../layout/MainLayout";
-import Lottie from "lottie-react";
-import animationData from "../assets/lottie/water.json";
+import Splash from "./Splash";
 
-const Home = ({ darkMode }: { darkMode: boolean }) => {
-
-  // const [darkMode, setDarkMode] = useState<boolean>(true);
-  const [isAppVisible, ] = useState(true);
-
-  useEffect(() => {
-    // const timer = setTimeout(() => {
-    //   setIsAppVisible(true);
-    // }, 6000);
-
-    // return () => clearTimeout(timer); // Clear the timer if the component unmounts
-  }, []);
+const Home = ({ darkMode, isAppVisible }: { darkMode: boolean, isAppVisible: boolean }) => {
 
   return (
     <div
@@ -43,15 +30,7 @@ const Home = ({ darkMode }: { darkMode: boolean }) => {
             <div className="md:blur-purple z-0" style={{ pointerEvents: 'none' }}></div>
           </div>
         ) : (
-          <div className="flex flex-col md:flex-row justify-center items-center w-full md:w-2/3 min-h-screen mx-auto">
-            <Lottie animationData={animationData} />
-            <div className="text-3xl font-main text-white my-10 p-10 md:p-0">
-              " Empty your mind, be formless. Shapeless, like water. If you put water into a cup, it becomes the cup. "
-              <div className="text-sm my-3">
-                - Bruce Lee
-              </div>
-            </div>
-          </div>
+          <Splash />
         )}
       </div>
   )

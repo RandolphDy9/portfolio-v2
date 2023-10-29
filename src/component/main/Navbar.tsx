@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import ButtonFill from "../shared/ButtonFill";
 import Logo from "../../assets/icons/updated-logo.svg";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react"; // Import useState
+import HoverLineUnder from "../shared/HoverLineUnder";
 
 type NavbarType = {
   darkMode: boolean;
@@ -17,77 +19,106 @@ const Navbar = ({ darkMode, handleDarkMode }: NavbarType) => {
     damping: 30,
   };
   const navigate = useNavigate();
+  const [isMenuOpen, setMenuOpen] = useState(false); // State to track menu open/close
+
+  const toggleMenu = () => {
+    setMenuOpen(!isMenuOpen);
+  };
 
   return (
-    <div
+    <nav
       className={`${
         !darkMode ? "bg-light text-dark shadow-xl" : "bg-dark text-white"
-      } w-full py-6 flex justify-between items-center px-12`}
+      } w-full py-6 px-4 md:px-12`}
     >
-      <div className="font-main flex items-end gap-1 font-bold md:w-1/3" onClick={() => navigate('/')}>
-        <img src={Logo} alt="Dy-logo" width="36" />
-      </div>
-
-      <div className="flex justify-center items-center self-center text-lg gap-6 md:w-1/3">
-        <div className="cursor-pointer hover:text-via" onClick={() => navigate('/about')}>About</div>
-        <div className="cursor-pointer hover:text-via" onClick={() => navigate('/experience')}>Experience</div>
-        <div className="cursor-pointer hover:text-via" onClick={() => navigate('/archive')}>Projects</div>
-      </div>
-
-      <div className="flex md:justify-end gap-6 md:w-1/3">
-        <div
-          className={`w-22 h-12 md:w-24 md:h-13 rounded-3xl flex items-center cursor-pointer ${
-            darkMode
-              ? "justify-start bg-gray-700 "
-              : "justify-end border-dark bg-gray-300"
-          }`}
-          onClick={handleDarkMode}
-        >
-          <div>
-            {!darkMode && (
-              <img
-                src={Moon}
-                alt="color-switch-icon"
-                width={25}
-                className="cursor-pointer mx-2 md:mx-1"
-              />
-            )}
-          </div>
-          <motion.div
-            className="bg-accent w-7 h-7 md:w-9 md:h-9 rounded-3xl md:px-2 mx-2 flex flex-col items-end justify-center"
-            layout
-            transition={spring}
-          />
-          <div>
-            {darkMode && (
-              <img
-                src={Sun}
-                alt="color-switch-icon"
-                width={25}
-                className="cursor-pointer mx-2 md:mx-1"
-              />
-            )}
-          </div>
+      <div className="flex items-center justify-between">
+        <div className="font-main flex items-center gap-1 font-bold cursor-pointer" onClick={() => navigate('/')}>
+          <img src={Logo} alt="Dy-logo" width="52" />
         </div>
 
-        <div className="cursor-pointer">
-          <ButtonFill
-            label="Resume"
-            absoluteClasses={`${!darkMode ? "bg-dark" : "bg-[#aaa]"}`}
-            relativeClasses={`${
-              !darkMode
-                ? "border-dark bg-white text-dark"
-                : "border-white bg-dark text-white"
+      <div className="hidden md:flex justify-center items-center gap-6">
+        <div className="flex text-lg md:text-xl gap-6">
+          <HoverLineUnder onClick={() => navigate('/about')} label="About" />
+          <HoverLineUnder onClick={() => navigate('/experience')} label="Experience" />
+          <HoverLineUnder onClick={() => navigate('/archive')} label="Projects" />
+
+          {/* <div className="cursor-pointer hover:text-via" onClick={() => navigate('/about')}>About</div>
+          <div className="cursor-pointer hover:text-via" onClick={() => navigate('/experience')}>Experience</div>
+          <div className="cursor-pointer hover:text-via" onClick={() => navigate('/archive')}>Projects</div> */}
+        </div>
+
+        <div className="mt-4 md:mt-0 flex flex-col md:flex-row justify-center items-center md:justify-end gap-6">
+          <div
+            className={`w-22 h-8 md:w-24 md:h-11 rounded-3xl flex items-center cursor-pointer ${
+              darkMode
+                ? "justify-start bg-gray-700 "
+                : "justify-end border-dark bg-gray-300"
             }`}
-            onClick={() =>
-              window.open(
-                "https://www.dropbox.com/scl/fi/gsrfko04raorw35025zwo/Resume-Randolph-Dy.pdf?rlkey=g2gs6e3sp5809u4s6ks4aw3il&dl=0"
-              )
-            }
-          />
+            onClick={handleDarkMode}
+          >
+            <div>
+              {!darkMode && (
+                <img
+                  src={Moon}
+                  alt="color-switch-icon"
+                  width={25}
+                  className="cursor-pointer mx-2 md:mx-1"
+                />
+              )}
+            </div>
+            <motion.div
+              className="bg-accent w-5 h-5 md:w-9 md:h-9 rounded-3xl md:px-2 mx-2 flex flex-col items-end justify-center"
+              layout
+              transition={spring}
+            />
+            <div>
+              {darkMode && (
+                <img
+                  src={Sun}
+                  alt="color-switch-icon"
+                  width={25}
+                  className="cursor-pointer mx-2 md:mx-1"
+                />
+              )}
+            </div>
+          </div>
+
+          <div className="mt-4 md:mt-0 cursor-pointer">
+            <ButtonFill
+              label="Resume"
+              absoluteClasses={`${!darkMode ? "bg-dark" : "bg-white"}`}
+              relativeClasses={`${
+                !darkMode
+                  ? "border-dark bg-white text-white"
+                  : "border-white bg-dark text-dark"
+              }`}
+              onClick={() =>
+                window.open(
+                  "https://www.dropbox.com/scl/fi/4bj0999gz4gfjjfkve64q/Resume-Randolph-Dy.pdf?rlkey=25tsea25jmo0s1724xerws5g2&dl=0"
+                )
+              }
+            />
+          </div>
         </div>
       </div>
-    </div>
+
+        <button
+          className="md:hidden text-2xl"
+          onClick={toggleMenu}
+        >
+          ☰
+        </button>
+      </div>
+
+      {/* Mobile menu */}
+      {isMenuOpen && (
+        <div className="mt-4 md:mt-0 flex flex-col md:flex-row justify-center items-center text-lg gap-6 md:hidden">
+          <div className="cursor-pointer hover:text-via" onClick={() => navigate('/about')}>About</div>
+          <div className="cursor-pointer hover:text-via" onClick={() => navigate('/experience')}>Experience</div>
+          <div className="cursor-pointer hover:text-via" onClick={() => navigate('/archive')}>Projects</div>
+        </div>
+      )}
+    </nav>
   );
 };
 

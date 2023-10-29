@@ -17,7 +17,7 @@ type BadgeType = {
 
 const Card = ({ date, company, position, description, cards }: CardType) => {
   return (
-    <div className="flex flex-col md:flex-row my-4 p-6 md:mx-24">
+    <div className="flex flex-col md:flex-row my-4 py-2 md:p-6 md:mx-18">
       <div className="flex flex-col justify-start w-full md:w-1/3 text-left md:text-right md:mx-4 font-secondary text-xl">
         {date}
       </div>
@@ -65,14 +65,14 @@ const Experience = ({ darkMode }: { darkMode: boolean }) => {
         <div className="flex flex-col w-full m-6 md:m-12">
           <div>
             <div
-              className="cursor-pointer hover:underline hover:underline-offset-2"
+              className="mb-2 cursor-pointer relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-via after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
               onClick={() => navigate("/")}
             >
               &#8592; Randolph Dy
             </div>
             <div className="text-5xl">All Projects</div>
           </div>
-          <div className="text-3xl md:text-6xl text-center md:mt-28 my-16">
+          <div className="text-5xl md:text-6xl text-center md:mt-28 my-16">
             Work Experience
           </div>
 
