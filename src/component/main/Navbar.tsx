@@ -94,7 +94,7 @@ const Navbar = ({ darkMode, handleDarkMode }: NavbarType) => {
               }`}
               onClick={() =>
                 window.open(
-                  "https://drive.google.com/drive/folders/1muDwD3DNYfMC2FpflzevrwFU4MO74eHt"
+                  "https://drive.google.com/file/d/1oAZqIftyKlroO5Ec8lqbrrjJdEY43GbS/view?usp=drive_link"
                 )
               }
             />
