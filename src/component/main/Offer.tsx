@@ -3,13 +3,6 @@ import RevealAnimation from "../shared/RevealAnimation";
 import animationData from "../../assets/lottie/offer.json";
 import Lottie from "lottie-react";
 
-type CardType = {
-  label: string;
-  title: string;
-  description: string;
-  darkMode: boolean;
-};
-
 const Offer = () => {
   return (
     <div className="p-2">
