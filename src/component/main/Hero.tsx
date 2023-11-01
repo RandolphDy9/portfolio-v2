@@ -11,7 +11,7 @@ type HeroType = {
 
 const Hero = ({ darkMode }: HeroType) => {
   return (
-    <div className="p-6 md:p-10 w-full flex flex-col md:flex-row gap-4 min-h-[90vh]">
+    <div className="p-6 md:p-10 w-full flex flex-col md:flex-row gap-8 min-h-[90vh]">
       <div className="w-full md:w-1/2 flex flex-col justify-center">
         <div className="text-md md:text-lg font-secondary flex gap-3">
           Hello There! <img src={Wave} alt="wave-icon" width="26" /> I am
@@ -64,7 +64,7 @@ const Hero = ({ darkMode }: HeroType) => {
           <img
             src={Dop}
             alt="profile"
-            className={`object-cover md:px-20 w-full`}
+            className={`object-cover w-full`}
           />
         </RevealAnimation>
       </div>
