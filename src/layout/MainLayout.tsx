@@ -22,7 +22,7 @@ const MainLayout = ({ darkMode, children }: LayoutType) => {
         <img src={`${darkMode ? FacebookWhite : FacebookBlack}`} alt="facebook-icon" width="30" className="cursor-pointer hover:scale-125" onClick={() => window.open('https://www.facebook.com/randolph.dy/', '_blank')} />
         <img src={`${darkMode ? GithubWhite : GithubBlack}`} alt="github-icon" width="26" className="cursor-pointer hover:scale-125" onClick={() => window.open('https://github.com/RandolphDy9', '_blank')} />
         <img src={`${darkMode ? CodepenWhite : CodepenBlack}`} alt="codepen-icon" width="26" className="cursor-pointer hover:scale-125" onClick={() => window.open('https://codepen.io/Randolph-Mayson-Dy', '_blank')} />
-        <img src={`${darkMode ? LinkedinWhite : LinkedinBlack}`} alt="linkedin-icon" width="26" className="cursor-pointer hover:scale-125" onClick={() => window.open('https://www.linkedin.com/feed/', '_blank')} />
+        <img src={`${darkMode ? LinkedinWhite : LinkedinBlack}`} alt="linkedin-icon" width="26" className="cursor-pointer hover:scale-125" onClick={() => window.open('https://www.linkedin.com/in/maysondy/', '_blank')} />
       </div>
 
       <div className="w-full md:w-10/12 mx-auto overflow-y-auto">
