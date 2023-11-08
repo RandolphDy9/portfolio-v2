@@ -84,7 +84,7 @@ const Navbar = ({ darkMode, handleDarkMode }: NavbarType) => {
           </div>
 
           <div className="mt-4 md:mt-0 cursor-pointer">
-            <ButtonFill
+            {/* <ButtonFill
               label="Resume"
               absoluteClasses={`${!darkMode ? "bg-dark" : "bg-white"}`}
               relativeClasses={`${
@@ -92,6 +92,15 @@ const Navbar = ({ darkMode, handleDarkMode }: NavbarType) => {
                   ? "border-dark bg-white text-white"
                   : "border-white bg-dark text-dark"
               }`}
+              onClick={() =>
+                window.open(
+                  "https://drive.google.com/file/d/1oAZqIftyKlroO5Ec8lqbrrjJdEY43GbS/view?usp=drive_link"
+                )
+              }
+            /> */}
+            <ButtonFill
+              label="Resume"
+              absoluteClasses={`${darkMode ? "bg-dark text-white border-white hover:shadow-[4px_4px_0px_white]" : "bg-white text-dark border-dark hover:shadow-[4px_4px_0px_black]"}`}
               onClick={() =>
                 window.open(
                   "https://drive.google.com/file/d/1oAZqIftyKlroO5Ec8lqbrrjJdEY43GbS/view?usp=drive_link"

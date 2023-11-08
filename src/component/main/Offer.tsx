@@ -6,9 +6,9 @@ import Lottie from "lottie-react";
 const Offer = () => {
   return (
     <div className="p-2">
-      <div className="text-3xl md:text-6xl text-center md:mt-12 my-16">
+      {/* <div className="text-3xl md:text-6xl text-center md:mt-12 my-16">
         My Services
-      </div>
+      </div> */}
       <div className="grid grid-cols-1 md:grid-cols-2 md:gap-12 px-4 md:px-10 md:mb-12">
         <div>
           <Lottie animationData={animationData} />

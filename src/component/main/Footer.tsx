@@ -31,12 +31,7 @@ const Footer = ({ darkMode }: FooterType) => {
         <div className="mx-auto flex justify-center my-4">
           <ButtonFill
             label="Get in Touch!"
-            absoluteClasses={`${!darkMode ? "bg-dark" : "bg-white"}`}
-            relativeClasses={`${
-              !darkMode
-                ? "border-dark bg-white text-white"
-                : "border-white bg-dark text-dark"
-            }`}
+            absoluteClasses={`${darkMode ? "bg-dark text-white border-white hover:shadow-[4px_4px_0px_white]" : "bg-white text-dark border-dark hover:shadow-[4px_4px_0px_black]"}`}
             onClick={() => window.open("mailto:mayson.dy@gmail.com")}
           />
         </div>

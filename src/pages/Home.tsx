@@ -2,6 +2,8 @@ import Footer from "../component/main/Footer";
 import Hero from "../component/main/Hero";
 import Offer from "../component/main/Offer";
 import Projects from "../component/main/Projects";
+import Skills from "../component/main/Skills";
+import Testimonials from "../component/main/Testimonials";
 import MainLayout from "../layout/MainLayout";
 import Splash from "./Splash";
 
@@ -18,10 +20,12 @@ const Home = ({ darkMode, isAppVisible }: { darkMode: boolean, isAppVisible: boo
             <MainLayout darkMode={darkMode}>
               <div className="flex flex-col w-full">
                 <Hero darkMode={darkMode} />
+                <Skills />
                 <Offer />
                 {/* <About darkMode={darkMode} /> */}
                 {/* <Experience /> */}
                 <Projects darkMode={darkMode} />
+                <Testimonials darkMode={darkMode} />
                 <Footer darkMode={darkMode} />
               </div>
             </MainLayout>

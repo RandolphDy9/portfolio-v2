@@ -4,6 +4,7 @@ import Dop from "../../assets/images/updated-canva-ai-me.svg";
 import Wave from "../../assets/images/waving.png";
 import Point from "../../assets/images/point.png";
 import ButtonFill from "../shared/ButtonFill";
+import { motion } from "framer-motion";
 
 type HeroType = {
   darkMode: boolean;
@@ -50,23 +51,21 @@ const Hero = ({ darkMode }: HeroType) => {
         <div className="flex flex-row my-4">
           <ButtonFill
             label="Contact Me"
-            absoluteClasses={`${!darkMode ? "bg-dark" : "bg-white"}`}
-            relativeClasses={`${
-              !darkMode
-                ? "border-dark bg-white text-white"
-                : "border-white bg-dark text-dark"
-            }`}
-            onClick={() => window.open("mailto:mayson.dy@gmail.com")} />
+            absoluteClasses={`${darkMode ? "bg-dark text-white border-white hover:shadow-[4px_4px_0px_white]" : "bg-white text-dark border-dark hover:shadow-[4px_4px_0px_black]"}`}
+            onClick={() => window.open("mailto:mayson.dy@gmail.com")}
+          />
         </div>
       </div>
       <div className="w-full md:w-1/2 bg-transparent flex justify-center items-center z-10 relative">
-        <RevealAnimation rightToLeft={true}>
-          <img
-            src={Dop}
-            alt="profile"
-            className={`object-cover w-full`}
-          />
-        </RevealAnimation>
+        <motion.div
+          initial={{ y: 0 }} // Initial position
+          animate={{ y: 10, transition: { yoyo: Infinity, duration: 2 } }} // Animate the 'y' position to create a floating effect
+          whileHover={{ scale: 1.05 }} // Enlarge the image on hover
+        >
+          <RevealAnimation rightToLeft={true}>
+            <img src={Dop} alt="profile" className={`object-cover w-full`} />
+          </RevealAnimation>
+        </motion.div>
       </div>
     </div>
   );
