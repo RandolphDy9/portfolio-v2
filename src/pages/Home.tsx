@@ -1,5 +1,6 @@
 import Footer from "../component/main/Footer";
 import Hero from "../component/main/Hero";
+import Hero2 from "../component/main/Hero2";
 import Offer from "../component/main/Offer";
 import Projects from "../component/main/Projects";
 import Skills from "../component/main/Skills";

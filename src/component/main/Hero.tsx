@@ -1,6 +1,6 @@
 import GradientText from "../shared/GradientText";
 import RevealAnimation from "../shared/RevealAnimation";
-import Dop from "../../assets/images/updated-canva-ai-me.svg";
+import Dop from "../../assets/images/coding-bg-me4.svg";
 import Wave from "../../assets/images/waving.png";
 import Point from "../../assets/images/point.png";
 import ButtonFill from "../shared/ButtonFill";
@@ -12,7 +12,7 @@ type HeroType = {
 
 const Hero = ({ darkMode }: HeroType) => {
   return (
-    <div className="p-6 md:p-10 w-full flex flex-col md:flex-row gap-8 min-h-[90vh]">
+    <div className="px-6 md:px-10 w-full flex flex-col md:flex-row gap-8 min-h-[90vh]">
       <div className="w-full md:w-1/2 flex flex-col justify-center">
         <div className="text-md md:text-lg font-secondary flex gap-3">
           Hello There! <img src={Wave} alt="wave-icon" width="26" /> I am
@@ -56,7 +56,7 @@ const Hero = ({ darkMode }: HeroType) => {
           />
         </div>
       </div>
-      <div className="w-full md:w-1/2 bg-transparent flex justify-center items-center z-10 relative">
+      <div className="w-full md:w-1/2 bg-transparent flex justify-center items-center z-10 relative floating">
         <motion.div
           initial={{ y: 0 }} // Initial position
           animate={{ y: 10, transition: { yoyo: Infinity, duration: 2 } }} // Animate the 'y' position to create a floating effect
