@@ -20,10 +20,10 @@ const Hero = ({ darkMode }: HeroType) => {
         <RevealAnimation leftToRight={true}>
           <GradientText
             text="Randolph Mayson Dy"
-            classes="text-6xl md:text-8xl font-main my-2 font-bold"
+            classes="text-5xl md:text-7xl font-main my-2 font-bold"
           />
         </RevealAnimation>
-        <div className="text-2xl md:text-4xl my-2 font-semibold ">
+        <div className="text-xl md:text-3xl my-2 font-semibold ">
           <RevealAnimation>
             I build digital experiences for the online world.
           </RevealAnimation>

@@ -33,7 +33,7 @@ const Navbar = ({ darkMode, handleDarkMode }: NavbarType) => {
     >
       <div className="flex items-center justify-between">
         <div className="font-main flex items-center gap-1 font-bold cursor-pointer" onClick={() => navigate('/')}>
-          <img src={Logo} alt="Dy-logo" width="52" />
+          <img src={Logo} alt="Dy-logo" width="55" />
         </div>
 
       <div className="hidden md:flex justify-center items-center gap-6">
