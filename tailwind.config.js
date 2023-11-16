@@ -27,6 +27,8 @@ export default {
         'infinite-scroll-right': 'infinite-scroll-right 40s linear infinite',
         'infinite-scroll-left-slow': 'infinite-scroll-left 60s linear infinite',
         'infinite-scroll-right-slow': 'infinite-scroll-right 60s linear infinite',
+        blob: 'blob 7s infinite',
+        blob2: 'blob 4s infinite',
       },
       keyframes: {
         'infinite-scroll-left': {
@@ -36,6 +38,20 @@ export default {
         'infinite-scroll-right': {
           from: { transform: 'translateX(-100%)' },
           to: { transform: 'translateX(0%)' },
+        },
+        blob: {
+          "0%": {
+            transform: "translate(0px, 0px) scale(1)"
+          },
+          "33%": {
+            transform: "translate(30px, -50px) scale(1.1)"
+          },
+          "66%": {
+            transform: "translate(-20px, 20) scale(0.9)"
+          },
+          "100%": {
+            transform: "translate(0px, 0px) scale(1)"
+          }
         }
       }  
     }, 

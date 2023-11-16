@@ -26,7 +26,7 @@ const MainLayout = ({ darkMode, children }: LayoutType) => {
       </div>
 
       <div className="w-full md:w-10/12 mx-auto overflow-y-auto">
-        <div className="flex self-start min-h-screen h-100 shadow-xl rounded-b-lg">
+        <div className="flex self-start min-h-screen h-100 rounded-b-lg">
           { children }
         </div>
         <div className="my-12 text-center text-sm mx-auto">

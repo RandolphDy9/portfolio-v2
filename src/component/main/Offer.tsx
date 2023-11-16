@@ -1,66 +1,53 @@
-import GradientText from "../shared/GradientText";
 import RevealAnimation from "../shared/RevealAnimation";
-import animationData from "../../assets/lottie/offer.json";
-import Lottie from "lottie-react";
+import Dop from "../../assets/images/coding-bg-me4.svg";
+
+type CardType = {
+  title: string;
+  description: string;
+};
+
+const Card = ({ title, description }: CardType) => {
+  return (
+    <div className="flex flex-col justify-center items-center">
+      <div className="text-3xl bg-gradient-to-r from-from via-via to-to text-transparent bg-clip-text font-bold">
+        {title}
+      </div>
+      <div className="my-3">
+        {description}
+      </div>
+    </div>
+  );
+};
 
 const Offer = () => {
   return (
-    <div className="p-2">
-      {/* <div className="text-3xl md:text-6xl text-center md:mt-12 my-16">
-        My Services
-      </div> */}
-      <div className="grid grid-cols-1 md:grid-cols-2 md:gap-12 px-4 md:px-10 md:mb-12">
-        <div>
-          <Lottie animationData={animationData} />
+    <div className="p-6 md:py-20">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
+        <div className="col-span-5 md:p-6">
+          <RevealAnimation rightToLeft={true}>
+            <img src={Dop} alt="profile" className={`object-cover w-full`} />
+          </RevealAnimation>
         </div>
-        <div className="flex flex-col justify-center gap-8 items-center">
-          <div>
-            <RevealAnimation leftToRight={true}>
-              <GradientText
-                text="Angular and React Development"
-                classes="font-main text-xl md:text-3xl font-bold"
-              />
-            </RevealAnimation>
-            <div>
-              Expert frontend development using Angular and React for responsive
-              and bug-free web applications.
-            </div>
-          </div>
-          <div>
-            <RevealAnimation leftToRight={true}>
-              <GradientText
-                text="UI Design and Development"
-                classes="font-main text-xl md:text-3xl font-bold"
-              />
-            </RevealAnimation>
-            <div>
-              Craft visually appealing, responsive and user-friendly interfaces,
-              enhancing user engagement.
-            </div>
-          </div>
-          <div>
-            <RevealAnimation leftToRight={true}>
-              <GradientText
-                text="Custom Frontend Solutions"
-                classes="font-main text-xl md:text-3xl font-bold"
-              />
-            </RevealAnimation>
-            <div>
-              Tailored services for unique web applications, interface
-              optimization, and specialized UI/UX design.
-            </div>
-          </div>
-          <div>
-            <RevealAnimation leftToRight={true}>
-              <GradientText
-                text="Performance Optimization"
-                classes="font-main text-xl md:text-3xl font-bold"
-              />
-            </RevealAnimation>
-            <div>
-              Optimize web app performance, refactor code for efficiency, and
-              enhance load times.
-            </div>
+
+        <div className="col-span-7 flex flex-grow">
+          <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-6 md:gap-16">
+
+            <Card
+              title="Angular / React Development"
+              description="Experts in dynamic and responsive web applications using Angular and React."
+            />
+            <Card
+              title="UI Design and Development"
+              description="Crafting visually stunning, user-friendly interfaces for a seamless and delightful user experience."
+            />
+            <Card
+              title="Custom Frontend Solutions"
+              description="Tailored solutions meeting unique requirements, aligned with your business goals."
+            />
+            <Card
+              title="Performance Optimization"
+              description="Ensuring high-speed, efficient web applications for a smooth user experience."
+            />
           </div>
         </div>
       </div>

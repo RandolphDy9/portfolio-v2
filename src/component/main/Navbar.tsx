@@ -29,7 +29,7 @@ const Navbar = ({ darkMode, handleDarkMode }: NavbarType) => {
     <nav
       className={`${
         !darkMode ? "bg-light text-dark shadow-xl" : "bg-dark text-white"
-      } w-full py-6 px-4 md:px-12`}
+      } w-full py-6 px-4 md:px-12 font-main`}
     >
       <div className="flex items-center justify-between">
         <div className="font-main flex items-center gap-1 font-bold cursor-pointer" onClick={() => navigate('/')}>
