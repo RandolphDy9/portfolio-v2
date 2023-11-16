@@ -66,9 +66,9 @@ const Hero = ({ darkMode }: HeroType) => {
         </div>
       </div>
       <div className="md:relative hidden md:block">
-        <div className={`absolute w-[30rem] h-[24rem] rounded-full bg-from top-28 -right-36 opacity-70 blur-3xl filter animate-blob ${darkMode ? 'mix-blend-lighten': 'mix-blend-multiply'}`}></div>
-        <div className={`absolute w-[25rem] h-[23rem] rounded-full bg-via top-56 right-24 opacity-70 blur-3xl filter animate-blob2 animation-delay-40 ${darkMode ? 'mix-blend-lighten': 'mix-blend-multiply'}`}></div>
-        <div className={`absolute w-[10rem] h-[15rem] rounded-full bg-to top-44 -left-4 space-y-4 opacity-70 filter blur-3xl animate-blob animation-delay-2000 ${darkMode ? 'mix-blend-lighten': 'mix-blend-multiply'}`}></div>
+        <div className={`absolute w-[30rem] h-[26rem] rounded-full bg-from top-20 -right-36 opacity-70 blur-xl filter animate-blob ${darkMode ? 'mix-blend-lighten': 'mix-blend-multiply'}`}></div>
+        <div className={`absolute w-[25rem] h-[23rem] rounded-full bg-via top-56 right-24 opacity-70 blur-xl filter animate-blob2 animation-delay-4000 ${darkMode ? 'mix-blend-lighten': 'mix-blend-multiply'}`}></div>
+        <div className={`absolute w-[15rem] h-[15rem] rounded-full bg-to top-44 left-12 space-y-4 opacity-70 filter blur-xl animate-blob3 animation-delay-6000 ${darkMode ? 'mix-blend-lighten': 'mix-blend-multiply'}`}></div>
       </div>
     </div>
   );

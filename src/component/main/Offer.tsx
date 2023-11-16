@@ -21,7 +21,7 @@ const Card = ({ title, description }: CardType) => {
 
 const Offer = () => {
   return (
-    <div className="p-6 md:py-20">
+    <div className="p-6 md:py-24">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
         <div className="col-span-5 md:p-6">
           <RevealAnimation rightToLeft={true}>

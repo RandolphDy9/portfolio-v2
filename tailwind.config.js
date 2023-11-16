@@ -29,6 +29,7 @@ export default {
         'infinite-scroll-right-slow': 'infinite-scroll-right 60s linear infinite',
         blob: 'blob 7s infinite',
         blob2: 'blob 4s infinite',
+        blob3: 'blob 6s infinite',
       },
       keyframes: {
         'infinite-scroll-left': {
