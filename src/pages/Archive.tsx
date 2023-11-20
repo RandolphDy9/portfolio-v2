@@ -38,7 +38,7 @@ const Archive = ({ darkMode }: { darkMode: boolean }) => {
   return (
     <div
       className={`min-h-screen h-full font-main text-xl md:text-2xl ${
-        !darkMode ? "bg-light text-dark" : "bg-dark text-white"
+        !darkMode ? "bg-light text-dark" : "bg-dark text-light"
       }`}
     >
       <MainLayout darkMode={darkMode}>

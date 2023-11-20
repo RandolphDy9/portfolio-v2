@@ -14,7 +14,7 @@ const FlipCard = ({ frontContent, backContent }: CardType) => {
 
   return (
     <div
-      className={`relative w-96 h-60 rounded-2xl text-white overflow-hidden cursor-pointer transition-all duration-700 card ${
+      className={`relative w-96 h-60 rounded-2xl text-light overflow-hidden cursor-pointer transition-all duration-700 card ${
         isFlipped ? 'flipped' : ''
       }`}
       onClick={handleFlip}

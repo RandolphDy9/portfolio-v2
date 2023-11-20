@@ -12,7 +12,7 @@ const Home = ({ darkMode, isAppVisible }: { darkMode: boolean, isAppVisible: boo
   return (
     <div
         className={`min-h-screen h-full font-main ${
-          !darkMode ? "bg-light text-dark" : "bg-dark text-white"
+          !darkMode ? "bg-light text-dark" : "bg-dark text-light"
         }`}
       >
         {isAppVisible ? (

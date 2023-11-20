@@ -1,4 +1,3 @@
-// import GradientText from "../shared/GradientText";
 import RevealAnimation from "../shared/RevealAnimation";
 import Wave from "../../assets/images/waving.png";
 import Point from "../../assets/images/point.png";
@@ -58,8 +57,8 @@ const Hero = ({ darkMode }: HeroType) => {
             label="Contact Me"
             absoluteClasses={`${
               darkMode
-                ? "bg-dark text-white border-white hover:shadow-[4px_4px_0px_white]"
-                : "bg-white text-dark border-dark hover:shadow-[4px_4px_0px_black]"
+                ? "bg-dark text-light border-light hover:shadow-[4px_4px_0px_white]"
+                : "bg-light text-dark border-dark hover:shadow-[4px_4px_0px_black]"
             }`}
             onClick={() => window.open("mailto:mayson.dy@gmail.com")}
           />

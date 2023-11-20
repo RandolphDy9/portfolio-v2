@@ -28,7 +28,7 @@ const Navbar = ({ darkMode, handleDarkMode }: NavbarType) => {
   return (
     <nav
       className={`${
-        !darkMode ? "bg-light text-dark shadow-xl" : "bg-dark text-white"
+        !darkMode ? "bg-light text-dark shadow-xl" : "bg-dark text-light"
       } w-full py-6 px-4 md:px-12 font-main`}
     >
       <div className="flex items-center justify-between">
@@ -86,11 +86,11 @@ const Navbar = ({ darkMode, handleDarkMode }: NavbarType) => {
           <div className="mt-4 md:mt-0 cursor-pointer">
             {/* <ButtonFill
               label="Resume"
-              absoluteClasses={`${!darkMode ? "bg-dark" : "bg-white"}`}
+              absoluteClasses={`${!darkMode ? "bg-dark" : "bg-light"}`}
               relativeClasses={`${
                 !darkMode
-                  ? "border-dark bg-white text-white"
-                  : "border-white bg-dark text-dark"
+                  ? "border-dark bg-light text-light"
+                  : "border-light bg-dark text-dark"
               }`}
               onClick={() =>
                 window.open(
@@ -100,10 +100,10 @@ const Navbar = ({ darkMode, handleDarkMode }: NavbarType) => {
             /> */}
             <ButtonFill
               label="Resume"
-              absoluteClasses={`${darkMode ? "bg-dark text-white border-white hover:shadow-[4px_4px_0px_white]" : "bg-white text-dark border-dark hover:shadow-[4px_4px_0px_black]"}`}
+              absoluteClasses={`${darkMode ? "bg-dark text-light border-light hover:shadow-[4px_4px_0px_white]" : "bg-light text-dark border-dark hover:shadow-[4px_4px_0px_black]"}`}
               onClick={() =>
                 window.open(
-                  "https://drive.google.com/file/d/1oAZqIftyKlroO5Ec8lqbrrjJdEY43GbS/view?usp=drive_link"
+                  "https://drive.google.com/file/d/1MhWWwyw5qdTmOVeZXAWUiqSfYZj18qIh/view?usp=drive_link"
                 )
               }
             />
