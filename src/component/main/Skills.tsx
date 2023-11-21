@@ -16,6 +16,7 @@ import Icon15 from "../../assets/icons/tech/sass.svg";
 import Icon16 from "../../assets/icons/tech/webflow.svg";
 import Icon17 from "../../assets/icons/tech/typescript.svg";
 import Icon18 from "../../assets/icons/tech/vscode.svg";
+import Icon19 from "../../assets/icons/tech/vue.svg";
 
 const Skills = () => {
   return (
@@ -115,6 +116,9 @@ const Skills = () => {
             <li>
               <img src={Icon18} alt="VScode" width="60" />
             </li>
+            <li>
+              <img src={Icon19} alt="VScode" width="60" />
+            </li>
           </ul>
           <ul
             className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll-right"
@@ -146,6 +150,9 @@ const Skills = () => {
             </li>
             <li>
               <img src={Icon18} alt="VScode" width="60" />
+            </li>
+            <li>
+              <img src={Icon19} alt="VScode" width="60" />
             </li>
           </ul>
         </div>

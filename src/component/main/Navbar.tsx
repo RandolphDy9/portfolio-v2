@@ -103,7 +103,7 @@ const Navbar = ({ darkMode, handleDarkMode }: NavbarType) => {
               absoluteClasses={`${darkMode ? "bg-dark text-light border-light hover:shadow-[4px_4px_0px_white]" : "bg-light text-dark border-dark hover:shadow-[4px_4px_0px_black]"}`}
               onClick={() =>
                 window.open(
-                  "https://drive.google.com/file/d/1MhWWwyw5qdTmOVeZXAWUiqSfYZj18qIh/view?usp=drive_link"
+                  "https://drive.google.com/file/d/11aHIMCCp33dFIsOfs0PCf7kXOCu_JK1H/view?usp=drive_link"
                 )
               }
             />

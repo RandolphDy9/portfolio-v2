@@ -1,6 +1,13 @@
 const experienceData = [
   {
     year: "2023",
+    title: "Vue Todo App",
+    built: "Home",
+    developed: ["Vue", "JavaScript", "CSS3"],
+    link: "",
+  },
+  {
+    year: "2023",
     title: "Portfolio v1",
     built: "Home",
     developed: ["React", "Tailwind CSS"],
