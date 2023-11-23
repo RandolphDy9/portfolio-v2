@@ -1,6 +1,8 @@
 import MainLayout from "../layout/MainLayout";
 import { useNavigate } from "react-router-dom";
 import experienceData from "../data/experienceData";
+import LinkWhite from "../assets/icons/dark/link-white.svg";
+import LinkBlack from "../assets/icons/light/link-black.svg";
 
 type RowType = {
   year: string;
@@ -8,16 +10,19 @@ type RowType = {
   built: string;
   developed: string[];
   link: string;
+  darkMode: boolean;
 };
 
 const Row = (item: RowType) => {
   return (
-    <div className="grid md:grid-cols-12 mt-2 text-lg md:text-xl hover:bg-via hover:text-dark hover:rounded-xl p-2 md:p-4">
+    <div className="grid md:grid-cols-12 mt-2 text-md md:text-lg hover:bg-via hover:text-dark hover:rounded-xl p-2 md:p-4">
       <div className="grid md:col-span-1 my-auto">{item.year}</div>
-      <div className="grid md:col-span-4 my-auto font-semibold">{item.title}</div>
+      <div className="grid md:col-span-4 my-auto font-semibold">
+        {item.title}
+      </div>
       <div className="grid md:col-span-2 my-auto">{item.built}</div>
-      <div className="grid md:col-span-5 my-auto">
-        <div className="flex flex-wrap gap-2 text-md">
+      <div className="grid md:col-span-4 my-auto">
+        <div className="flex flex-wrap gap-2 text-sm">
           {item.developed.map((i, index) => {
             return (
               <div className="flex gap-2" key={`item${i}`}>
@@ -27,7 +32,20 @@ const Row = (item: RowType) => {
           })}
         </div>
       </div>
-      {/* <div className="grid md:col-span-1 my-auto">{item.link}</div> */}
+      {item.link !== "" && (
+        <div className="grid md:col-span-1 my-auto">
+          <div
+            className="cursor-pointer hover:scale-110"
+            onClick={() => window.open(linkToUrl)}
+          >
+            <img
+              src={`${item.darkMode ? LinkWhite : LinkBlack}`}
+              alt="external-link"
+              width="24"
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
@@ -59,8 +77,8 @@ const Archive = ({ darkMode }: { darkMode: boolean }) => {
             <div className="grid md:col-span-1">Year</div>
             <div className="grid md:col-span-4">Title</div>
             <div className="grid md:col-span-2">Built at</div>
-            <div className="grid md:col-span-5">Developed using</div>
-            {/* <div className="grid md:col-span-1">Link</div> */}
+            <div className="grid md:col-span-4">Developed using</div>
+            <div className="grid md:col-span-1">Link</div>
           </div>
 
           {experienceData.map((item) => {
@@ -72,6 +90,7 @@ const Archive = ({ darkMode }: { darkMode: boolean }) => {
                 built={item.built}
                 developed={item.developed}
                 link={item.link}
+                darkMode={darkMode}
               />
             );
           })}

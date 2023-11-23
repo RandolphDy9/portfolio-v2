@@ -234,12 +234,19 @@ const Projects = ({ darkMode }: ProjectType) => {
           linkToUrl="https://codepen.io/Randolph-Mayson-Dy/full/VwVBXow"
           used={["React", "Bootstrap", "HTML5", "CSS3"]}
         />
-        <Card
+        {/* <Card
           darkMode={darkMode}
           title="Random Quote Generator"
           description="Developed as a freeCodeCamp challenge, the Random Quote Generator provides ever-changing, engaging inspiration."
           linkToUrl="https://codepen.io/Randolph-Mayson-Dy/full/gOQzJVb"
           used={["React", "Bootstrap", "HTML5", "CSS3"]}
+        /> */}
+        <Card
+          darkMode={darkMode}
+          title="Location Tracker"
+          description="An application that enables users to track searched locations and mark them accordingly. With deletion and table pagination capabilitites."
+          linkToUrl="https://location-tracker-vue.netlify.app/"
+          used={["Vue", "Tailwind CSS", "Google Maps"]}
         />
         <Card
           darkMode={darkMode}
