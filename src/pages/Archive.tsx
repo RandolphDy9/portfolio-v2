@@ -22,7 +22,7 @@ const Row = (item: RowType) => {
       </div>
       <div className="grid md:col-span-2 my-auto">{item.built}</div>
       <div className="grid md:col-span-4 my-auto">
-        <div className="flex flex-wrap gap-2 text-sm">
+        <div className="flex flex-wrap gap-2 text-sm  ">
           {item.developed.map((i, index) => {
             return (
               <div className="flex gap-2" key={`item${i}`}>
@@ -36,7 +36,7 @@ const Row = (item: RowType) => {
         <div className="grid md:col-span-1 my-auto">
           <div
             className="cursor-pointer hover:scale-110"
-            onClick={() => window.open(linkToUrl)}
+            onClick={() => window.open(item.link)}
           >
             <img
               src={`${item.darkMode ? LinkWhite : LinkBlack}`}
