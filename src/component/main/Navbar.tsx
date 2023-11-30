@@ -1,10 +1,9 @@
 import Moon from "../../assets/icons/light/moon.svg";
 import Sun from "../../assets/icons/dark/sun.svg";
 import { motion } from "framer-motion";
-import ButtonFill from "../shared/ButtonFill";
 import Logo from "../../assets/icons/updated-logo.svg";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react"; // Import useState
+import { useState } from "react";
 import HoverLineUnder from "../shared/HoverLineUnder";
 
 type NavbarType = {
@@ -41,10 +40,6 @@ const Navbar = ({ darkMode, handleDarkMode }: NavbarType) => {
           <HoverLineUnder onClick={() => navigate('/about')} label="About" />
           <HoverLineUnder onClick={() => navigate('/experience')} label="Experience" />
           <HoverLineUnder onClick={() => navigate('/archive')} label="Projects" />
-
-          {/* <div className="cursor-pointer hover:text-via" onClick={() => navigate('/about')}>About</div>
-          <div className="cursor-pointer hover:text-via" onClick={() => navigate('/experience')}>Experience</div>
-          <div className="cursor-pointer hover:text-via" onClick={() => navigate('/archive')}>Projects</div> */}
         </div>
 
         <div className="mt-4 md:mt-0 flex flex-col md:flex-row justify-center items-center md:justify-end gap-6">
@@ -52,7 +47,7 @@ const Navbar = ({ darkMode, handleDarkMode }: NavbarType) => {
             className={`w-22 h-8 md:w-24 md:h-11 rounded-3xl flex items-center cursor-pointer ${
               darkMode
                 ? "justify-start bg-gray-700 "
-                : "justify-end border-dark bg-gray-300"
+                : "justify-end border-dark bg-purple-50 border"
             }`}
             onClick={handleDarkMode}
           >
@@ -81,32 +76,6 @@ const Navbar = ({ darkMode, handleDarkMode }: NavbarType) => {
                 />
               )}
             </div>
-          </div>
-
-          <div className="mt-4 md:mt-0 cursor-pointer">
-            {/* <ButtonFill
-              label="Resume"
-              absoluteClasses={`${!darkMode ? "bg-dark" : "bg-light"}`}
-              relativeClasses={`${
-                !darkMode
-                  ? "border-dark bg-light text-light"
-                  : "border-light bg-dark text-dark"
-              }`}
-              onClick={() =>
-                window.open(
-                  "https://drive.google.com/file/d/1oAZqIftyKlroO5Ec8lqbrrjJdEY43GbS/view?usp=drive_link"
-                )
-              }
-            /> */}
-            <ButtonFill
-              label="Resume"
-              absoluteClasses={`${darkMode ? "bg-dark text-light border-light hover:shadow-[4px_4px_0px_white]" : "bg-light text-dark border-dark hover:shadow-[4px_4px_0px_black]"}`}
-              onClick={() =>
-                window.open(
-                  "https://drive.google.com/file/d/11aHIMCCp33dFIsOfs0PCf7kXOCu_JK1H/view?usp=drive_link"
-                )
-              }
-            />
           </div>
         </div>
       </div>

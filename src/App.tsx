@@ -26,6 +26,7 @@ function App() {
           darkMode={darkMode}
           handleDarkMode={() => setDarkMode(!darkMode)}
         />
+        
       }
       <Routes>
         <Route path="/" element={<Home darkMode={darkMode} isAppVisible={isAppVisible} />} />

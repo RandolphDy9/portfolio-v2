@@ -3,6 +3,7 @@ import Wave from "../../assets/images/waving.png";
 import Point from "../../assets/images/point.png";
 import ButtonFill from "../shared/ButtonFill";
 import { TypeAnimation } from "react-type-animation";
+import Spline from "@splinetool/react-spline";
 
 type HeroType = {
   darkMode: boolean;
@@ -10,13 +11,17 @@ type HeroType = {
 
 const Hero = ({ darkMode }: HeroType) => {
   return (
-    <div className="px-6 md:px-10 w-full flex flex-col md:flex-row gap-8 md:min-h-[80vh] relative">
-      <div className="flex flex-col justify-center md:mx-20">
-        <div className="text-md md:text-lg font-secondary flex gap-3">
-          Hello There! <img src={Wave} alt="wave-icon" width="26" /> I am
+    <div className="px-6 flex py-12 md:py-0 justify-center w-full gap-8 md:min-h-[80vh] relative">
+      <div className="hidden md:absolute animate-blob md:block">
+        <Spline scene="https://prod.spline.design/wfXHkAgIdi1WVnH0/scene.splinecode" style={{ maxHeight: '600px' }} />
+      </div>
+      <div className="flex flex-col justify-center">
+        <div className="text-md md:text-lg font-secondary flex">
+          Hello There!{" "}
+          <img src={Wave} alt="wave-icon" width="26" className="mx-2" /> I am
         </div>
         <RevealAnimation leftToRight={true}>
-          <div className="bg-gradient-to-r from-from via-via to-to text-transparent bg-clip-text text-4xl md:text-6xl font-main my-2 font-bold">
+          <div className="bg-gradient-to-r from-from via-via to-to text-transparent bg-clip-text text-3xl md:text-6xl font-main my-2 font-bold">
             <TypeAnimation
               sequence={[
                 "Randolph Mayson Dy",
@@ -29,12 +34,12 @@ const Hero = ({ darkMode }: HeroType) => {
             />
           </div>
         </RevealAnimation>
-        <div className="text-2xl md:text-3xl my-2 font-semibold ">
+        <div className="text-xl md:text-3xl my-2 font-semibold ">
           <RevealAnimation>
             I build digital experiences for the online world.
           </RevealAnimation>
         </div>
-        <div className="text-md md:text-xl font-secondary my-2">
+        <div className="text-md md:text-lg font-secondary my-2">
           <RevealAnimation>
             <div className="flex flex-col gap-2">
               <div className="flex flex-row gap-4">
@@ -52,9 +57,9 @@ const Hero = ({ darkMode }: HeroType) => {
             </div>
           </RevealAnimation>
         </div>
-        <div className="flex flex-row my-4">
+        <div className="flex flex-row my-4 gap-4 z-10">
           <ButtonFill
-            label="Contact Me"
+            label="Connect"
             absoluteClasses={`${
               darkMode
                 ? "bg-dark text-light border-light hover:shadow-[4px_4px_0px_white]"
@@ -62,15 +67,24 @@ const Hero = ({ darkMode }: HeroType) => {
             }`}
             onClick={() => window.open("mailto:mayson.dy@gmail.com")}
           />
+          <ButtonFill
+            label="Resume"
+            absoluteClasses={`${
+              darkMode
+                ? "bg-dark text-light border-light hover:shadow-[4px_4px_0px_white]"
+                : "bg-light text-dark border-dark hover:shadow-[4px_4px_0px_black]"
+            }`}
+            onClick={() =>
+              window.open(
+                "https://drive.google.com/file/d/11aHIMCCp33dFIsOfs0PCf7kXOCu_JK1H/view?usp=drive_link"
+              )
+            }
+          />
         </div>
-      </div>
-      <div className="md:relative hidden md:block">
-        <div className={`absolute w-[30rem] h-[26rem] rounded-full bg-from top-20 -right-36 opacity-70 blur-xl filter animate-blob ${darkMode ? 'mix-blend-lighten': 'mix-blend-multiply'}`}></div>
-        <div className={`absolute w-[25rem] h-[23rem] rounded-full bg-via top-56 right-24 opacity-70 blur-xl filter animate-blob2 animation-delay-4000 ${darkMode ? 'mix-blend-lighten': 'mix-blend-multiply'}`}></div>
-        <div className={`absolute w-[15rem] h-[15rem] rounded-full bg-to top-44 left-12 space-y-4 opacity-70 filter blur-xl animate-blob3 animation-delay-6000 ${darkMode ? 'mix-blend-lighten': 'mix-blend-multiply'}`}></div>
+        <div className="bg-gradient-to-r from-from via-via to-to h-4 md:h-10 shadow-lg filter blur-3xl"></div>
       </div>
     </div>
   );
-}
+};
 
 export default Hero;

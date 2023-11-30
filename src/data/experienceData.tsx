@@ -1,6 +1,13 @@
 const experienceData = [
   {
     year: "2023",
+    title: "Nobel Prize List",
+    built: "Home",
+    developed: ["React", "Tailwind CSS", "Nobel Api"],
+    link: "https://loop-nobel.netlify.app/",
+  },
+  {
+    year: "2023",
     title: "Location Tracker",
     built: "Home",
     developed: ["Vue", "Tailwind CSS", "Google Maps Api"],

@@ -14,3 +14,11 @@
   50%  { transform: translate(0, -25px); }
   100%   { transform: translate(0, -0px); }    
 }
+
+.hero-container {
+  position: relative;
+  background-image: url('https://prod.spline.design/wfXHkAgIdi1WVnH0/scene.splinecode');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
