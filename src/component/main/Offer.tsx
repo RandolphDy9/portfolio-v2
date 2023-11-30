@@ -20,7 +20,7 @@ const Card = ({ title, description }: CardType) => {
 
 const Offer = () => {
   return (
-    <div className="p-6">
+    <div className="p-6 md:mb-20">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
         <div className="col-span-6 hidden md:block">
             <Spline scene="https://prod.spline.design/sB5TQBh9-4IXBrau/scene.splinecode" style={{ maxWidth: '600px' }} />
