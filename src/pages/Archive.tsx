@@ -15,12 +15,12 @@ type RowType = {
 
 const Row = (item: RowType) => {
   return (
-    <div className="grid md:grid-cols-12 mt-2 text-md md:text-lg hover:bg-via hover:text-dark hover:rounded-xl p-2 md:p-4">
-      <div className="grid md:col-span-1 my-auto">{item.year}</div>
-      <div className="grid md:col-span-4 my-auto font-semibold">
+    <div className="grid md:grid-cols-12 mt-2 hover:text-via hover:rounded-xl p-2 md:p-4">
+      <div className="md:col-span-1 my-auto text-lg flex items-center">{item.year}</div>
+      <div className="grid md:col-span-4 my-auto text-lg md:text-xl">
         {item.title}
       </div>
-      <div className="grid md:col-span-2 my-auto">{item.built}</div>
+      <div className="grid md:col-span-2 my-auto text-lg">{item.built}</div>
       <div className="grid md:col-span-4 my-auto">
         <div className="flex flex-wrap gap-2 text-sm  ">
           {item.developed.map((i, index) => {
@@ -33,7 +33,7 @@ const Row = (item: RowType) => {
         </div>
       </div>
       {item.link !== "" && (
-        <div className="grid md:col-span-1 my-auto">
+        <div className="md:col-span-1 my-auto flex items-center">
           <div
             className="cursor-pointer hover:scale-110"
             onClick={() => window.open(item.link)}

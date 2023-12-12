@@ -9,10 +9,13 @@ export default {
       colors: {
         accent: "#707aff",
         dark: "#171717",
-        light: "#E6E6FA",
-        from: "#D16BA5",
-        via: "#86A8E7",
-        to: "#5FFBF1"
+        light: "#EFEFEF",
+        from: "#c94f94",
+        via: "#5584dd",
+        to: "#06f9e8"
+        // from: "#D16BA5",
+        // via: "#86A8E7",
+        // to: "#5FFBF1"
       },
       fontFamily: {
         'main': ['Poppins', 'sans-serif'],
@@ -38,7 +41,7 @@ export default {
         },
         blob: {
           "0%": {
-            transform: "translate(80px, -20px) scale(1)"
+            transform: "translate(160px, -20px) scale(1)"
           },
           "33%": {
             transform: "translate(300px, -300px) scale(1.1)"
@@ -47,7 +50,7 @@ export default {
             transform: "translate(-900px, 900) scale(0.9)"
           },
           "100%": {
-            transform: "translate(80px, -20px) scale(1)"
+            transform: "translate(160px, -20px) scale(1)"
           }
         }
       }  

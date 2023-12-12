@@ -12,8 +12,8 @@ type HeroType = {
 const Hero = ({ darkMode }: HeroType) => {
   return (
     <div className="px-6 flex py-12 md:py-0 justify-center w-full gap-8 md:min-h-[80vh] relative">
-      <div className="hidden md:absolute animate-blob md:block">
-        <Spline scene="https://prod.spline.design/wfXHkAgIdi1WVnH0/scene.splinecode" style={{ maxHeight: '600px' }} />
+      <div className="hidden md:absolute animate-blob md:block w-[1200px] h-[600px]">
+        <Spline scene="https://prod.spline.design/wfXHkAgIdi1WVnH0/scene.splinecode" />
       </div>
       <div className="flex flex-col justify-center">
         <div className="text-md md:text-lg font-secondary flex">
@@ -83,6 +83,7 @@ const Hero = ({ darkMode }: HeroType) => {
         </div>
         <div className="bg-gradient-to-r from-from via-via to-to h-4 md:h-10 shadow-lg filter blur-3xl"></div>
       </div>
+      <div className="w-32"></div>
     </div>
   );
 };

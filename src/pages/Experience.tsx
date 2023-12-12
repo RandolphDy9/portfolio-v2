@@ -5,6 +5,7 @@ import MainLayout from "../layout/MainLayout";
 
 type CardType = {
   date: string;
+  underDate: string;
   company: string;
   position: string;
   description: string;
@@ -15,17 +16,25 @@ type BadgeType = {
   label: string;
 };
 
-const Card = ({ date, company, position, description, cards }: CardType) => {
+const Card = ({
+  date,
+  underDate,
+  company,
+  position,
+  description,
+  cards,
+}: CardType) => {
   return (
     <div className="flex flex-col md:flex-row my-4 py-2 md:p-6 md:mx-18">
-      <div className="flex flex-col justify-start w-full md:w-1/3 text-left md:text-right md:mx-4 font-secondary text-xl">
-        {date}
+      <div className="flex flex-col justify-start w-full md:w-1/3 text-left md:text-right md:mx-4 font-secondary text-lg">
+        <div>{date}</div>
+        <div className="text-sm my-1">{underDate}</div>
       </div>
       <div className="flex flex-col justify-start w-full md:w-2/3 md:mx-4">
         <RevealAnimation leftToRight={true}>
           <GradientText
             text={company}
-            classes="text-5xl font-main font-semibold"
+            classes="text-4xl font-main font-semibold"
           />
         </RevealAnimation>
         <div className="text-xl font-main">
@@ -77,7 +86,8 @@ const Experience = ({ darkMode }: { darkMode: boolean }) => {
           </div>
 
           <Card
-            date="Aug 2018 - Present"
+            date="Aug 2018 - Oct 2023"
+            underDate="5 years and 3 months"
             company="Exist Software Labs, Inc."
             position="Frontend Developer • Full time"
             description="Contributed to the core system of development by working on modules
@@ -95,6 +105,7 @@ const Experience = ({ darkMode }: { darkMode: boolean }) => {
           />
           <Card
             date="Feb 2023 - Sep 2023"
+            underDate="8 months"
             company="DEVCON Philippines"
             position="Frontend Developer • Part time"
             description="Crafted responsive, user-friendly interfaces using React.js, utilizing Tailwind CSS extensively 30% for efficient styling."
@@ -102,6 +113,7 @@ const Experience = ({ darkMode }: { darkMode: boolean }) => {
           />
           <Card
             date="Aug 2022 - Feb 2023"
+            underDate="7 months"
             company="Talino Venture Labs"
             position="Frontend Developer • Part time"
             description="Writing well-structured, modular, and maintainable code using best
@@ -118,6 +130,7 @@ const Experience = ({ darkMode }: { darkMode: boolean }) => {
           />
           <Card
             date="Jun 2021 - Sep 2021"
+            underDate="4 months"
             company="IT Creed"
             position="Angular Developer • Freelance"
             description="Development of responsive and reusable features for FunnelCone’s web
@@ -125,12 +138,24 @@ const Experience = ({ darkMode }: { darkMode: boolean }) => {
             collaborating closely with the team, and documenting bug tickets or any code changes."
             cards={["Angular", "Angular Material", "Firebase", "Bootstrap"]}
           />
+          <Card
+            date="Apr 2017 - Jun 2017"
+            underDate="3 months"
+            company="Exist Software Labs, Inc."
+            position="Web Developer • Internship"
+            description="Introduced to HTML, CSS, and JavaScript, and applied this knowledge to create a basic,
+            fully functional order management system. Actively participated in Scrum meetings for other projects,
+            contributed to bug identification and UI enhancements for specific web applications, and gained proficiency
+            in using bug tracking tools such as Jira and DEN."
+            cards={["HTML5", "CSS3", "JavaScript", "SQL"]}
+          />
 
           <div className="text-3xl md:text-6xl text-center md:mt-28 my-16">
             Volunteer Experience
           </div>
           <Card
-            date="Jan 2023 - Present"
+            date="Jan 2023 - Dec 2023"
+            underDate="12 months"
             company="DEVCON Cebu"
             position="Social Media Manager"
             description="As a dedicated volunteer at DEVCON Cebu, I have had the privilege of serving as
