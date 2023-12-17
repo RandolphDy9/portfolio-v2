@@ -30,7 +30,11 @@ const About = ({ darkMode }: { darkMode: boolean }) => {
             <img src={Dop} alt="My-photo" className="w-full md:w-1/4" />
             <div className="flex flex-col justify-center">
               <div className="text-3xl md:text-4xl">Randolph Mayson Dy</div>
-              <div className="my-4">Experienced Frontend Developer | Angular, React, and TypeScript | 🚀 25%+ User Engagement Growth | Actively Seeking Mid-Level Opportunities</div>
+              <div className="my-4">
+                Experienced Frontend Developer | Angular, React, and TypeScript
+                | 🚀 25%+ User Engagement Growth | Actively Seeking Mid-Level
+                Opportunities
+              </div>
               <div>Based in Toronto, Canada</div>
             </div>
           </div>
@@ -41,8 +45,11 @@ const About = ({ darkMode }: { darkMode: boolean }) => {
                 classes="font-main text-4xl md:text-5xl font-bold py-2"
               />
               <div className="my-4">
-                With five years of experience as a Frontend Developer, I'm
-                deeply passionate about web development and dedicated to
+                Verified International Academic Qualifications certificate holder
+                from World Education Services (WES)
+                <br />
+                <br /> With five years of experience as a Frontend Developer,
+                I'm deeply passionate about web development and dedicated to
                 assisting others. My expertise in HTML, CSS, and JavaScript
                 provides a strong foundation for creating visually appealing and
                 robust websites.

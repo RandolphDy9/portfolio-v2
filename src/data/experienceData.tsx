@@ -1,6 +1,13 @@
 const experienceData = [
   {
     year: "2023",
+    title: "SimpleLyric",
+    built: "Home",
+    developed: ["React", "Tailwind CSS"],
+    link: "https://bmi-task-react.netlify.app/",
+  },
+  {
+    year: "2023",
     title: "Nobel Prize List",
     built: "Home",
     developed: ["React", "Tailwind CSS", "Nobel Api"],
@@ -29,6 +36,13 @@ const experienceData = [
   },
   {
     year: "2023",
+    title: "Harmony",
+    built: "Home",
+    developed: ["React", "GraphQL", "Apollo", "NodeJS"],
+    link: "https://github.com/RandolphDy9/pm-apollo",
+  },
+  {
+    year: "2023",
     title: "Portfolio v1",
     built: "Home",
     developed: ["React", "Tailwind CSS"],
@@ -39,14 +53,14 @@ const experienceData = [
     title: "Tarsier Studios",
     built: "Talino",
     developed: ["Webflow", "Figma"],
-    link: "",
+    link: "https://tarsier-studios.webflow.io/"
   },
   {
     year: "2023",
     title: "DigiTayo",
     built: "Devcon",
-    developed: ["React", "Tailwind CSS"],
-    link: "",
+    developed: ["React", "Tailwind CSS", "NodeJS"],
+    link: "https://digitayo.ph/"
   },
   {
     year: "2023",
@@ -130,7 +144,7 @@ const experienceData = [
     title: "First Gen",
     built: "Exist",
     developed: ["Angular", "Crafter CMS"],
-    link: "",
+    link: "https://www.firstgen.com.ph/",
   },
   {
     year: "2021",

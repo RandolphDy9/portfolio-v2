@@ -2,6 +2,11 @@ import { useNavigate } from "react-router-dom";
 import GradientText from "../component/shared/GradientText";
 import RevealAnimation from "../component/shared/RevealAnimation";
 import MainLayout from "../layout/MainLayout";
+import VolunteerImg1 from "../assets/images/dev1.jpeg";
+import VolunteerImg2 from "../assets/images/dev2.jpeg";
+import VolunteerImg3 from "../assets/images/dev3.jpeg";
+import LinkWhite from "../assets/icons/dark/link-white.svg";
+import LinkBlack from "../assets/icons/light/link-black.svg";
 
 type CardType = {
   date: string;
@@ -158,12 +163,55 @@ const Experience = ({ darkMode }: { darkMode: boolean }) => {
             underDate="12 months"
             company="DEVCON Cebu"
             position="Social Media Manager"
-            description="As a dedicated volunteer at DEVCON Cebu, I have had the privilege of serving as
-            the Social Media Manager, contributing to the organization's mission of fostering growth and
-            innovation in the tech industry within the Philippines. My role involves managing and curating
-            the online presence of DEVCON Cebu across various social media platforms."
+            description="As a dedicated volunteer Social Media Manager for DEVCON Cebu, I led the development and execution
+            of effective social media strategies, including content creation and community engagement. My initiatives resulted
+            in a notable 30% increase in follower engagement. Additionally, I served as a lead learner volunteer for DEVCON Kids,
+            facilitating interactive sessions on MicroBit core concepts through block coding during the MicroBit Code Camp on
+            October 7th, 2023, at Mandaue City Central School. This experience was fulfilling, contributing to children's education
+            and fostering an interest in technology."
             cards={[]}
           />
+          <div className="md:w-5/6 mx-auto grid md:grid-cols-3 gap-6">
+            <div className="grid gap-6 border rounded-3xl">
+              <img
+                className="object-cover h-full rounded-3xl"
+                src={VolunteerImg1}
+                alt="voluteer1-img"
+              />
+            </div>
+            <div className="grid gap-6 border rounded-3xl">
+              <img
+                className="object-cover h-full rounded-3xl"
+                src={VolunteerImg2}
+                alt="voluteer2-img"
+              />
+            </div>
+            <div className="grid gap-6 border rounded-3xl">
+              <img
+                className="object-cover h-full rounded-3xl"
+                src={VolunteerImg3}
+                alt="voluteer3-img"
+              />
+            </div>
+          </div>
+          <div
+              className="text-lg md:text-xl text-center mx-auto my-8 cursor-pointer relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-via after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
+              onClick={() =>
+                window.open(
+                  "https://www.facebook.com/devconcebu",
+                  "_blank"
+                )
+              }
+            >
+              <div className="flex gap-4 my-4">
+                <div>More About DEVCON Cebu</div>
+                <img
+                  src={`${darkMode ? LinkWhite : LinkBlack}`}
+                  alt="external-link"
+                  width="24"
+                />
+              </div>
+            </div>
         </div>
       </MainLayout>
     </div>
