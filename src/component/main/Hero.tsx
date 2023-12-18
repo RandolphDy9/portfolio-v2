@@ -4,14 +4,24 @@ import Point from "../../assets/images/point.png";
 import ButtonFill from "../shared/ButtonFill";
 import { TypeAnimation } from "react-type-animation";
 import Spline from "@splinetool/react-spline";
+import { useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
+import { motion } from 'framer-motion';
 
 type HeroType = {
   darkMode: boolean;
 };
 
 const Hero = ({ darkMode }: HeroType) => {
+  const targetRef = useRef<HTMLDivElement>(null);
+  const { scrollY } = useScroll({ target: targetRef });
+
+  const opacity = useTransform(scrollY, [0, 500], [1, 0]);
+  const scale = useTransform(scrollY, [0, 500], [1, 0.8]);
+  
   return (
-    <div className="px-6 flex py-12 md:py-0 justify-center w-full gap-8 md:min-h-[80vh] relative">
+    <motion.div ref={targetRef}
+    style={{ opacity, scale }} className="px-6 flex py-12 md:py-0 justify-center w-full gap-8 md:min-h-[80vh] relative">
       <div className="hidden md:absolute animate-blob md:block w-[1200px] h-[600px]">
         <Spline scene="https://prod.spline.design/wfXHkAgIdi1WVnH0/scene.splinecode" />
       </div>
@@ -84,7 +94,7 @@ const Hero = ({ darkMode }: HeroType) => {
         <div className="bg-gradient-to-r from-from via-via to-to h-4 md:h-10 shadow-lg filter blur-3xl"></div>
       </div>
       <div className="w-32"></div>
-    </div>
+    </motion.div>
   );
 };
 

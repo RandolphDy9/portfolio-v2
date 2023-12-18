@@ -103,7 +103,7 @@ const FeaturedProject = ({
   const [isVideoPlaying, setVideoPlaying] = useState(false);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 mb-12 md:mb-20">
+    <div className="grid grid-cols-1 md:grid-cols-2 mb-12 md:mb-28">
       <div className="m-6 md:m-20 flex flex-col justify-center">
         <div>Featured Project</div>
         <RevealAnimation leftToRight={true}>
