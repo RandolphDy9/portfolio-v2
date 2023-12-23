@@ -157,6 +157,17 @@ const Projects = ({ darkMode }: ProjectType) => {
         Featured projects
       </div>
       <FeaturedProject
+        title="Drape"
+        description="Discover contemporary fashion at Drape—our sleek React and Tailwind CSS website
+          ensures a seamless shopping experience. Elevate your wardrobe effortlessly with our curated
+          collection, and enjoy secure checkout with integrated Stripe payments. Shop confidently at Drape,
+          where fashion meets technology seamlessly."
+        used={["React", "Tailwind CSS", "NodeJS", "Express", "Stripe"]}
+        image={Drape}
+        video={Video3}
+        linkToUrl="https://drape-clothing.netlify.app/"
+      />
+      <FeaturedProject
         title="Portfolio v1"
         description="Protfolio version 1 is a pivotal achievement in my web development journey,
           marking my first venture into React and Tailwind CSS. It's a captivating and interactive
@@ -177,17 +188,6 @@ const Projects = ({ darkMode }: ProjectType) => {
         image={TarsierStudios}
         video={Video2}
         linkToUrl="https://tarsier-studios.webflow.io/"
-      />
-      <FeaturedProject
-        title="Drape"
-        description="Drape is your go-to destination for contemporary fashion. Our sleek and modern
-          website, built using React and Tailwind CSS, offers a seamless shopping experience with convenient
-          'add to cart' functionality. Explore our curated collection of stylish clothing and elevate your
-          wardrobe effortlessly with Drape."
-        used={["React", "Tailwind CSS"]}
-        image={Drape}
-        video={Video3}
-        linkToUrl="https://drape-clothing.netlify.app/"
       />
 
       {/* <FeaturedProject

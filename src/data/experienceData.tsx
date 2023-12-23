@@ -73,7 +73,7 @@ const experienceData = [
     year: "2023",
     title: "Drape",
     built: "Home",
-    developed: ["React", "Tailwind CSS"],
+    developed: ["React", "Tailwind CSS", "NodeJS", "Stripe"],
     link: "https://drape-clothing.netlify.app",
   },
   {
