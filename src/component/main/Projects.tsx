@@ -5,12 +5,12 @@ import FolderBlack from "../../assets/icons/light/folder-black.svg";
 import GradientText from "../shared/GradientText";
 import RevealAnimation from "../shared/RevealAnimation";
 
-import PortfolioV1 from "../../assets/images/projects/portfolio-v1.png";
-import TarsierStudios from "../../assets/images/projects/tarsier-studios.png";
+import Eastwest from "../../assets/images/projects//eastwest.png";
 import Drape from "../../assets/images/projects/drape.png";
+import FirstGen from "../../assets/images/projects/firstgen.png";
 
-import Video1 from "../../assets/videos/portfolio1.mp4";
-import Video2 from "../../assets/videos/tarsier.mp4";
+import Video1 from "../../assets/videos/eastwest.mp4";
+import Video2 from "../../assets/videos/firstgen.mp4";
 import Video3 from "../../assets/videos/drape.mp4";
 
 import { useNavigate } from "react-router";
@@ -157,6 +157,27 @@ const Projects = ({ darkMode }: ProjectType) => {
         Featured projects
       </div>
       <FeaturedProject
+        title="Eastwest Ageas Insurance"
+        description="Angular-powered website, formerly Troo, now embodying EastWest and Ageas. Established in 2015,
+          it is the world's first insurance company with a cloud-based IT platform, offering a seamless customer
+          experience and personalized financial solutions. Explore for a better tomorrow with EastWest Ageas Insurance."
+        used={["Angular", "Bootstrap", "NgZorro"]}
+        image={Eastwest}
+        video={Video1}
+        linkToUrl="https://ewageas.com.ph/"
+      />
+      <FeaturedProject
+        title="First Gen"
+        description="A seamlessly crafted corporate website with Angular, Crafter CMS, and Bootstrap. Our
+          dynamic interface ensures an engaging user experience, Crafter CMS allows for flexible content management,
+          and Bootstrap's design elegance delivers a visually appealing platform, reflecting our commitment to
+          innovation and excellence."
+        used={["Angular", "Crafter CMS", "Bootstrap"]}
+        image={FirstGen}
+        video={Video2}
+        linkToUrl="https://tarsier-studios.webflow.io/"
+      />
+      <FeaturedProject
         title="Drape"
         description="Discover contemporary fashion at Drape—our sleek React and Tailwind CSS website
           ensures a seamless shopping experience. Elevate your wardrobe effortlessly with our curated
@@ -166,28 +187,6 @@ const Projects = ({ darkMode }: ProjectType) => {
         image={Drape}
         video={Video3}
         linkToUrl="https://drape-clothing.netlify.app/"
-      />
-      <FeaturedProject
-        title="Portfolio v1"
-        description="Protfolio version 1 is a pivotal achievement in my web development journey,
-          marking my first venture into React and Tailwind CSS. It's a captivating and interactive
-          showcase that not only displays my skills but also highlights my progress in
-          mastering new technologies."
-        used={["React", "Tailwind CSS", "Figma"]}
-        image={PortfolioV1}
-        video={Video1}
-        linkToUrl="https://protfoliov1-site.netlify.app"
-      />
-      <FeaturedProject
-        title="Tarsier Studios"
-        description="Embark on a journey into the realm of Tarsier Studios, where creativity meets
-          urgency. This project, meticulously crafted in a single night, marks my inaugural experience
-          with Webflow. Tasked with a tight deadline, I channeled my skills to breathe life into
-          Tarsier Studios' digital presence."
-        used={["Webflow", "Figma"]}
-        image={TarsierStudios}
-        video={Video2}
-        linkToUrl="https://tarsier-studios.webflow.io/"
       />
 
       {/* <FeaturedProject

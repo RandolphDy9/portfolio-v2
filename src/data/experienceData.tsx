@@ -143,7 +143,7 @@ const experienceData = [
     year: "2021",
     title: "First Gen",
     built: "Exist",
-    developed: ["Angular", "Crafter CMS"],
+    developed: ["Angular", "Crafter CMS", "Bootstrap"],
     link: "https://www.firstgen.com.ph/",
   },
   {
@@ -155,10 +155,10 @@ const experienceData = [
   },
   {
     year: "2021",
-    title: "Troo Insurance",
+    title: "Eastwest Ageas Insurance",
     built: "Exist",
     developed: ["Angular", "Bootstrap", "NgZorro"],
-    link: "",
+    link: "https://ewageas.com.ph/",
   },
   {
     year: "2021",
