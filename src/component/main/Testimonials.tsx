@@ -50,7 +50,7 @@ const Testimonials = ({ darkMode }: { darkMode: boolean }) => {
       </div>
 
       <div className="max-w-screen-xl mx-auto">
-        <div className="w-full inline-flex flex-nowrap overflow-x-auto">
+        <div className="w-full inline-flex flex-nowrap overflow-hidden">
           <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll-left-slow">
             <li>
               <Card darkMode={darkMode} name="Dianne M." position="Project Manager" comment="Randolph excels in quality and detail, consistently surpassing expectations. His code is clean and well-maintained, a testament to his pride in his craft." />
@@ -86,7 +86,7 @@ const Testimonials = ({ darkMode }: { darkMode: boolean }) => {
       </div>
 
       <div className="max-w-screen-xl mx-auto my-12">
-        <div className="w-full inline-flex flex-nowrap overflow-x-auto">
+        <div className="w-full inline-flex flex-nowrap overflow-hidden">
           <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll-right-slow">
             <li>
               <Card darkMode={darkMode} name="Kim O." position="Java Developer" comment="He's a proactive communicator, fostering a positive work environment and contributing meaningfully to discussions."  />

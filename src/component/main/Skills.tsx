@@ -20,7 +20,7 @@ import Icon9black from "../../assets/icons/tech/black/typescript_black.svg";
 
 const Skills = ({ darkMode }: { darkMode: boolean }) => {
   return (
-    <div className="p-10 md:py-20 flex flex-col gap-4 md:gap-12 overflow-x-auto">
+    <div className="p-10 md:py-20 flex flex-col gap-4 md:gap-12 overflow-hidden">
       <div className="max-w-screen-xl mx-auto">
         <div className="w-full inline-flex flex-nowrap">
           <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll-left">

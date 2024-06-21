@@ -86,7 +86,7 @@ const Hero = ({ darkMode }: HeroType) => {
             }`}
             onClick={() =>
               window.open(
-                "https://drive.google.com/file/d/11aHIMCCp33dFIsOfs0PCf7kXOCu_JK1H/view?usp=drive_link"
+                "https://drive.google.com/file/d/1_TRtkEM_-6jSPhbBKGrUP9SXC-lZ0dNw/view?usp=sharing"
               )
             }
           />

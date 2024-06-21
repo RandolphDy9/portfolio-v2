@@ -91,6 +91,33 @@ const Experience = ({ darkMode }: { darkMode: boolean }) => {
           </div>
 
           <Card
+            date="Jan 2024 - Present"
+            underDate="5 months +"
+            company="Bluewaves Mobility Innovation Inc."
+            position="Frontend Developer • Full time"
+            description="Led the frontend development for BMI’s Radio Management System as the sole Frontend Developer."
+            cards={[
+              "ReactJS",
+              "TypeScript",
+              "Bootstrap",
+              "Material UI"
+            ]}
+          />
+          <Card
+            date="Dec 2023 - Jan 2024"
+            underDate="2 months"
+            company="SerbLink"
+            position="Frontend Developer • Permanent part time"
+            description="Development of SerbLink website using Angular and Bootstrap for dynamic web applications."
+            cards={[
+              "Angular",
+              "TypeScript",
+              "HTML5",
+              "CSS3",
+              "Bootstrap",
+            ]}
+          />
+          <Card
             date="Aug 2018 - Oct 2023"
             underDate="5 years and 3 months"
             company="Exist Software Labs, Inc."
