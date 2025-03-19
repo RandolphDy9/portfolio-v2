@@ -222,23 +222,20 @@ const Experience = ({ darkMode }: { darkMode: boolean }) => {
             </div>
           </div>
           <div
-              className="text-lg md:text-xl text-center mx-auto my-8 cursor-pointer relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-via after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
-              onClick={() =>
-                window.open(
-                  "https://www.facebook.com/devconcebu",
-                  "_blank"
-                )
-              }
-            >
-              <div className="flex gap-4 my-4">
-                <div>More About DEVCON Cebu</div>
-                <img
-                  src={`${darkMode ? LinkWhite : LinkBlack}`}
-                  alt="external-link"
-                  width="24"
-                />
-              </div>
+            className="text-lg md:text-xl text-center mx-auto my-8 cursor-pointer relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-via after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
+            onClick={() =>
+              window.open("https://www.facebook.com/devconcebu", "_blank")
+            }
+          >
+            <div className="flex gap-4 my-4">
+              <div>More About DEVCON Cebu</div>
+              <img
+                src={`${darkMode ? LinkWhite : LinkBlack}`}
+                alt="external-link"
+                width="24"
+              />
             </div>
+          </div>
         </div>
       </MainLayout>
     </div>

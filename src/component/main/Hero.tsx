@@ -46,7 +46,7 @@ const Hero = ({ darkMode }: HeroType) => {
         </RevealAnimation>
         <div className="text-xl md:text-3xl my-2 font-semibold ">
           <RevealAnimation>
-            I build digital experiences for the online world.
+            I Create Impactful Digital Experiences for the Online World.
           </RevealAnimation>
         </div>
         <div className="text-md md:text-lg font-secondary my-2">
@@ -54,15 +54,19 @@ const Hero = ({ darkMode }: HeroType) => {
             <div className="flex flex-col gap-2">
               <div className="flex flex-row gap-4">
                 <img src={Point} alt="point" width="24" />
-                <div>Crafting seamless web experiences</div>
+                <div>Designing scalable, responsive web solutions</div>
               </div>
               <div className="flex flex-row gap-4">
                 <img src={Point} alt="point" width="24" />
-                <div>Ensuring responsiveness and accessibility</div>
+                <div>Crafting intuitive user interfaces using React and Angular</div>
               </div>
               <div className="flex flex-row gap-4">
                 <img src={Point} alt="point" width="24" />
-                <div>Optimizing performance</div>
+                <div>Delivering performance-driven applications</div>
+              </div>
+              <div className="flex flex-row gap-4">
+                <img src={Point} alt="point" width="24" />
+                <div>Optimizing accessibility for diverse audiences</div>
               </div>
             </div>
           </RevealAnimation>

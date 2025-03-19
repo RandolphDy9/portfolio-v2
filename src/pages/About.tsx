@@ -33,9 +33,9 @@ const About = ({ darkMode }: { darkMode: boolean }) => {
               <div className="flex flex-col justify-center">
                 <div className="text-3xl md:text-4xl">Randolph Mayson Dy</div>
                 <div className="my-4">
-                  Experienced Frontend Developer | Angular, React, and
-                  TypeScript | 🚀 25%+ User Engagement Growth | Actively Seeking
-                  Mid-Level Opportunities
+                  Frontend Software Engineer | ReactJS, Angular, React Native |
+                  Creating Scalable, High-Performance Web and Mobile Solutions
+                  for Enhanced User Experiences
                 </div>
                 <div>Based in Toronto, Canada</div>
               </div>
@@ -54,7 +54,7 @@ const About = ({ darkMode }: { darkMode: boolean }) => {
                 </RevealAnimation>
                 <RevealAnimation>
                   <br />
-                  <br /> With five years of experience as a Frontend Developer,
+                  <br /> With six years of experience as a Frontend Developer,
                   I'm deeply passionate about web development and dedicated to
                   assisting others. My expertise in HTML, CSS, and JavaScript
                   provides a strong foundation for creating visually appealing
@@ -101,30 +101,31 @@ const About = ({ darkMode }: { darkMode: boolean }) => {
                   unwavering determination. My academic pursuits culminated in a
                   groundbreaking thesis titled 'Video-Based Traffic Density
                   Calculator with Traffic Light Control Simulation,' a project
-                  that garnered global acclaim at CCSE-ASEAN 2019 and ICONTAS '23.
+                  that garnered global acclaim at CCSE-ASEAN 2019 and ICONTAS
+                  '23.
                   <br />
                   <br />
                 </RevealAnimation>
                 <RevealAnimation>
                   While technology has been a driving force in my life, there's
-                  more to me than just code. I find solace and a sense of freedom
-                  on the basketball court, where every dribble becomes a metaphor
-                  for life's challenges and triumphs. Off the court, the
-                  enchanting melodies of music offer a soothing escape, enriching
-                  the tapestry of my existence. Additionally, I have a deep
-                  affection for my two loyal canine companions. I love playing
-                  with my dogs, taking them on leisurely walks, and savoring
-                  moments of pure connection with these furry friends.
+                  more to me than just code. I find solace and a sense of
+                  freedom on the basketball court, where every dribble becomes a
+                  metaphor for life's challenges and triumphs. Off the court,
+                  the enchanting melodies of music offer a soothing escape,
+                  enriching the tapestry of my existence. Additionally, I have a
+                  deep affection for my two loyal canine companions. I love
+                  playing with my dogs, taking them on leisurely walks, and
+                  savoring moments of pure connection with these furry friends.
                   <br />
                   <br />
                 </RevealAnimation>
                 <RevealAnimation>
-                  And as a passionate traveler, I have an insatiable appetite for
-                  exploring new places, experiencing diverse cultures, and seeking
-                  inspiration from the wonders of the world. My life is a fusion
-                  of innovation, competition, artistic expression, and the thrill
-                  of discovering new horizons, both in the tech world and in the
-                  realm of human experience.
+                  And as a passionate traveler, I have an insatiable appetite
+                  for exploring new places, experiencing diverse cultures, and
+                  seeking inspiration from the wonders of the world. My life is
+                  a fusion of innovation, competition, artistic expression, and
+                  the thrill of discovering new horizons, both in the tech world
+                  and in the realm of human experience.
                 </RevealAnimation>
               </div>
             </div>

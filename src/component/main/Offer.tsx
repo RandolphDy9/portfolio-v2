@@ -29,23 +29,23 @@ const Offer = () => {
           <Spline scene="https://prod.spline.design/sB5TQBh9-4IXBrau/scene.splinecode" style={{ maxWidth: '600px' }} />
         </div>
 
-        <div className="col-span-6 flex my-12 md:my-0">
-          <div className="flex flex-col justify-center gap-6 md:gap-12">
+        <div className="col-span-6 flex my-6 md:my-0">
+          <div className="flex flex-col justify-center gap-3 md:gap-6">
             <Card
-              title="Angular, React, and Vue"
-              description="Expert in dynamic and responsive web applications using different frameworks."
+              title="Mastering Angular and ReactJS"
+              description="Proficient in building dynamic, responsive web applications that adapt seamlessly across devices using industry-leading frameworks."
             />
             <Card
-              title="UI Design and Development"
-              description="Crafting visually stunning, user-friendly interfaces for a seamless and delightful user experience."
+              title="UI Design & Development Excellence"
+              description="Creating visually captivating, intuitive interfaces designed to deliver a seamless and delightful user experience."
             />
             <Card
-              title="Custom Frontend Solutions"
-              description="Tailored solutions meeting unique requirements, aligned with your business goals."
+              title="Tailored Frontend Solutions"
+              description="Developing custom, scalable frontend solutions meticulously crafted to meet unique requirements and align with your business objectives."
             />
             <Card
-              title="Performance Optimization"
-              description="Ensuring high-speed, efficient web applications for a smooth user experience."
+              title="Performance-Driven Optimization"
+              description="Delivering lightning-fast, efficient web applications, ensuring smooth performance and exceptional user satisfaction."
             />
           </div>
         </div>

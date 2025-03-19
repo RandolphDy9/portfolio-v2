@@ -175,7 +175,7 @@ const Projects = ({ darkMode }: ProjectType) => {
         used={["Angular", "Crafter CMS", "Bootstrap"]}
         image={FirstGen}
         video={Video2}
-        linkToUrl="https://tarsier-studios.webflow.io/"
+        linkToUrl="https://www.firstgen.com.ph/"
       />
       <FeaturedProject
         title="Drape"
