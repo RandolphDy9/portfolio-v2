@@ -1,24 +1,24 @@
 import Spline from "@splinetool/react-spline";
-import RevealAnimation from "../shared/RevealAnimation";
+// import RevealAnimation from "../shared/RevealAnimation";
 import TitleLabel from "../shared/TitleLabel";
 
-type CardType = {
-  title: string;
-  description: string;
-};
+// type CardType = {
+//   title: string;
+//   description: string;
+// };
 
-const Card = ({ title, description }: CardType) => {
-  return (
-    <RevealAnimation rightToLeft={true}>
-      <div className="flex flex-col justify-center items-start md:px-8 rounded-2xl">
-        <div className="text-3xl bg-gradient-to-r from-from via-via to-to text-transparent bg-clip-text font-bold">
-          {title}
-        </div>
-        <div className="my-3">{description}</div>
-      </div>
-    </RevealAnimation>
-  );
-};
+// const Card = ({ title, description }: CardType) => {
+//   return (
+//     <RevealAnimation rightToLeft={true}>
+//       <div className="flex flex-col justify-center items-start md:px-8 rounded-2xl">
+//         <div className="text-3xl bg-gradient-to-r from-from via-via to-to text-transparent bg-clip-text font-bold">
+//           {title}
+//         </div>
+//         <div className="my-3">{description}</div>
+//       </div>
+//     </RevealAnimation>
+//   );
+// };
 
 const Offers = [
   {
@@ -57,7 +57,6 @@ const Offer = () => {
       </div>
       <div className="sticky top-0 flex h-screen w-full items-center">
         <Spline scene="https://prod.spline.design/sB5TQBh9-4IXBrau/scene.splinecode" style={{ maxWidth: '600px' }} />
-        {/* <div className="aspect-square w-full bg-gray-100"></div> */}
       </div>
     </div>
 
