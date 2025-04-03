@@ -1,5 +1,12 @@
 const experienceData = [
   {
+    year: "2025",
+    title: "Apple Clone",
+    built: "Home",
+    developed: ["React", "Tailwind CSS", "GSAP"],
+    link: "https://dancing-croissant-98a3c3.netlify.app/",
+  },
+  {
     year: "2023",
     title: "SimpleLyric",
     built: "Home",

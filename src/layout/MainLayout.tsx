@@ -16,32 +16,33 @@ type LayoutType = {
 
 const MainLayout = ({ darkMode, children }: LayoutType) => {
   return (
-    <div className="flex flex-row justify-between min-h-screen overflow-hidden ">
+    <div className="relative min-h-screen">
 
-      <div className="flex-col gap-7 fixed left-12 top-1/2 transform -translate-y-1/2 items-center hidden md:flex">
-        <img src={`${darkMode ? LinkedinWhite : LinkedinBlack}`} alt="linkedin-icon" width="26" className="cursor-pointer hover:scale-125" onClick={() => window.open('https://www.linkedin.com/in/maysondy/', '_blank')} />
-        <img src={`${darkMode ? CodepenWhite : CodepenBlack}`} alt="codepen-icon" width="26" className="cursor-pointer hover:scale-125" onClick={() => window.open('https://codepen.io/Randolph-Mayson-Dy', '_blank')} />
-        <img src={`${darkMode ? GithubWhite : GithubBlack}`} alt="github-icon" width="26" className="cursor-pointer hover:scale-125" onClick={() => window.open('https://github.com/RandolphDy9', '_blank')} />
-        <img src={`${darkMode ? FacebookWhite : FacebookBlack}`} alt="facebook-icon" width="30" className="cursor-pointer hover:scale-125" onClick={() => window.open('https://www.facebook.com/randolph.dy/', '_blank')} />
+      <div className="fixed left-12 top-1/2 transform -translate-y-1/2 items-center hidden md:flex flex-col gap-7">
+        <img src={darkMode ? LinkedinWhite : LinkedinBlack} alt="linkedin-icon" width="26" className="cursor-pointer hover:scale-125" onClick={() => window.open('https://www.linkedin.com/in/maysondy/', '_blank')} />
+        <img src={darkMode ? CodepenWhite : CodepenBlack} alt="codepen-icon" width="26" className="cursor-pointer hover:scale-125" onClick={() => window.open('https://codepen.io/Randolph-Mayson-Dy', '_blank')} />
+        <img src={darkMode ? GithubWhite : GithubBlack} alt="github-icon" width="26" className="cursor-pointer hover:scale-125" onClick={() => window.open('https://github.com/RandolphDy9', '_blank')} />
+        <img src={darkMode ? FacebookWhite : FacebookBlack} alt="facebook-icon" width="30" className="cursor-pointer hover:scale-125" onClick={() => window.open('https://www.facebook.com/randolph.dy/', '_blank')} />
       </div>
 
-      <div className="w-full md:w-9/12 mx-auto overflow-y-auto">
-        <div className="flex self-start min-h-screen h-100 rounded-b-lg">
-          { children }
+      <div className="w-full md:w-9/12 mx-auto">
+        <div className="min-h-screen">
+          {children}
         </div>
-        <div className="my-12 text-center text-sm mx-auto">
+        <div className="py-12 text-center text-sm mx-auto">
           Designed and Developed by Randolph Dy &copy; 2023
         </div>
       </div>
 
-      <div className="flex-col gap-24 fixed right-0 top-1/3 transform translate-y-1/3 items-center hidden md:flex">
+      <div className="fixed right-0 top-1/3 transform translate-y-1/3 items-center hidden md:flex flex-col gap-24">
         <div className="cursor-pointer hover:scale-125" onClick={() => window.open('mailto:mayson.dy@gmail.com')}>
-          <img src={`${darkMode ? EmailWhite : EmailBlack}`} alt="email-icon" width="22" />
+          <img src={darkMode ? EmailWhite : EmailBlack} alt="email-icon" width="22" />
         </div>
         <div className="transform rotate-90 text-sm font-bold">mayson.dy@gmail.com</div>
       </div>
+      
     </div>
-  )
-}
+  );
+};
 
 export default MainLayout;

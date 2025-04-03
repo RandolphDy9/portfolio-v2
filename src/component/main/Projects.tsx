@@ -183,35 +183,23 @@ const Projects = ({ darkMode }: ProjectType) => {
           ensures a seamless shopping experience. Elevate your wardrobe effortlessly with our curated
           collection, and enjoy secure checkout with integrated Stripe payments. Shop confidently at Drape,
           where fashion meets technology seamlessly."
-        used={["React", "Tailwind CSS", "NodeJS", "Express", "Stripe"]}
+        used={["React", "Tailwind", "NodeJS", "Express"]}
         image={Drape}
         video={Video3}
         linkToUrl="https://drape-clothing.netlify.app/"
       />
 
-      {/* <FeaturedProject
-        title="Newsfeed"
-        description="Crafted with React and influenced by the artistic spirit of Dribbble, this endeavor
-          seamlessly blends functionality and aesthetics. Newsfeed is a curated portal to the latest 
-          articles from NewsApi, bridging information and innovation."
-        used={["React", "Tailwind CSS"]}
-        image={Newsfeed}
-        linkToUrl="https://newsfeed-site.netlify.app"
-      /> */}
       <div className="text-3xl md:text-6xl text-center md:mt-28 my-16">
         Other notable projects
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-6 md:px-10">
-        {/* <Card
+        <Card
           darkMode={darkMode}
-          title="Sine TV"
-          description="Embark on a cinematic journey with sine tv, a dynamic app designed to seamlessly
-            fetch movie details from TheMovieDatabaseApi. Whether you're a devoted film buff or simply
-            seeking your next on-screen adventure, sine tv provides a gateway to explore, discover,
-            and immerse yourself in the world of movies."
-          linkToUrl="https://sinetv-site.netlify.app"
-          used={["React", "Tailwind CSS"]}
-        /> */}
+          title="Apple Clone"
+          description="Created an Apple Clone website using React and GSAP with smooth 3D effects."
+          linkToUrl="https://dancing-croissant-98a3c3.netlify.app/"
+          used={["React", "Tailwind CSS", "GSAP"]}
+        />
         <Card
           darkMode={darkMode}
           title="StaffHub"
@@ -254,13 +242,13 @@ const Projects = ({ darkMode }: ProjectType) => {
           linkToUrl="https://codepen.io/Randolph-Mayson-Dy/full/wvQxmVJ"
           used={["React", "Bootstrap", "HTML5", "CSS3"]}
         />
-        <Card
+        {/* <Card
           darkMode={darkMode}
           title="Pomodoro Timer"
           description="Inspired by Pomodoro, this project offers focused time management for enhanced productivity and balance."
           linkToUrl="https://codepen.io/Randolph-Mayson-Dy/full/OJaBJLd"
           used={["React", "Bootstrap", "HTML5", "CSS3"]}
-        />
+        /> */}
       </div>
 
       <div

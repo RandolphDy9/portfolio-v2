@@ -76,7 +76,7 @@ const Experience = ({ darkMode }: { darkMode: boolean }) => {
       }`}
     >
       <MainLayout darkMode={darkMode}>
-        <div className="flex flex-col w-full m-6 md:m-12">
+        <div className="flex flex-col w-full">
           <div>
             <div
               className="mb-2 cursor-pointer relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-via after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
@@ -91,8 +91,8 @@ const Experience = ({ darkMode }: { darkMode: boolean }) => {
           </div>
 
           <Card
-            date="Jan 2024 - Present"
-            underDate="5 months +"
+            date="Jan 2024 - Feb 2025"
+            underDate="1 year and 2 months"
             company="Bluewaves Mobility Innovation Inc."
             position="Frontend Developer • Full time"
             description="Led the frontend development for BMI’s Radio Management System as the sole Frontend Developer."

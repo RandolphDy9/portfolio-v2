@@ -3,7 +3,7 @@ import Wave from "../../assets/images/waving.png";
 import Point from "../../assets/images/point.png";
 import ButtonFill from "../shared/ButtonFill";
 import { TypeAnimation } from "react-type-animation";
-import Spline from "@splinetool/react-spline";
+// import Spline from "@splinetool/react-spline";
 import { useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { motion } from 'framer-motion';
@@ -22,9 +22,9 @@ const Hero = ({ darkMode }: HeroType) => {
   return (
     <motion.div ref={targetRef}
     style={{ opacity, scale }} className="px-6 flex py-12 md:py-0 justify-center w-full gap-8 md:min-h-[80vh] relative">
-      <div className="hidden md:absolute animate-blob md:block w-[1200px] h-[600px]">
+      {/* <div className="hidden md:absolute animate-blob md:block w-[1200px] h-[600px]">
         <Spline scene="https://prod.spline.design/wfXHkAgIdi1WVnH0/scene.splinecode" />
-      </div>
+      </div> */}
       <div className="flex flex-col justify-center">
         <div className="text-md md:text-lg font-secondary flex">
           Hello There!{" "}
@@ -90,12 +90,12 @@ const Hero = ({ darkMode }: HeroType) => {
             }`}
             onClick={() =>
               window.open(
-                "https://drive.google.com/file/d/1_TRtkEM_-6jSPhbBKGrUP9SXC-lZ0dNw/view?usp=sharing"
+                "https://drive.google.com/file/d/1rTVn8PzX9I1fT7vI5hqWjQZqIGBiCmXQ/view?usp=sharing"
               )
             }
           />
         </div>
-        <div className="bg-gradient-to-r from-from via-via to-to h-4 md:h-10 shadow-lg filter blur-3xl"></div>
+        {/* <div className="bg-gradient-to-r from-from via-via to-to h-4 md:h-10 shadow-lg filter blur-3xl"></div> */}
       </div>
       <div className="w-32"></div>
     </motion.div>

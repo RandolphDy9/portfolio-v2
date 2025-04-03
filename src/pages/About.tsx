@@ -14,7 +14,7 @@ const About = ({ darkMode }: { darkMode: boolean }) => {
       }`}
     >
       <MainLayout darkMode={darkMode}>
-        <div className="flex flex-col w-full m-6 md:m-12">
+        <div className="flex flex-col w-full">
           <div>
             <div
               className="mb-2 cursor-pointer relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-via after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
