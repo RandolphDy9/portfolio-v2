@@ -2,6 +2,10 @@ import Spline from "@splinetool/react-spline";
 // import RevealAnimation from "../shared/RevealAnimation";
 import TitleLabel from "../shared/TitleLabel";
 
+type Props = {
+  darkMode: boolean;
+};
+
 // type CardType = {
 //   title: string;
 //   description: string;
@@ -22,35 +26,35 @@ import TitleLabel from "../shared/TitleLabel";
 
 const Offers = [
   {
-    title: "Mastering Angular and ReactJS",
+    title: "React & Angular Expertise",
     description:
-      "Proficient in building dynamic, responsive web applications that adapt seamlessly across devices using industry-leading frameworks.",
+      "Building responsive, high-performing web apps using modern frameworks that scale with your business.",
   },
   {
-    title: 'UI Design & Development Excellence',
+    title: 'Polished UI & Seamless UX',
     description:
-      "Creating visually captivating, intuitive interfaces designed to deliver a seamless and delightful user experience.",
+      "Designing clean, intuitive interfaces that make every interaction feel effortless — and look amazing.",
   },
   {
-    title: "Tailored Frontend Solutions",
+    title: "Custom Frontend Solutions",
     description:
-      "Developing custom, scalable frontend solutions meticulously crafted to meet unique requirements and align with your business objectives.",
+      "From scratch to scale — tailored code that meets your goals, fits your stack, and grows with your users.",
   },
   {
-    title: "Performance-Driven Optimization",
+    title: "Speed & Performance Optimization",
     description:
-      "Delivering lightning-fast, efficient web applications, ensuring smooth performance and exceptional user satisfaction.",
+      "Fast load times. Smooth transitions. No lag. Just web experiences that feel lightning quick and friction-free.",
   },
 ];
 
-const Offer = () => {
+const Offer = ({ darkMode }: Props) => {
   return (
     <div className="flex w-full items-start gap-20">
-      <div className="w-full py-[50vh]">
+      <div className="w-full py-[30vh]">
         <ul>
           {Offers.map((item, index) => (
             <li key={index}>
-              <TitleLabel title={item.title} description={item.description} />
+              <TitleLabel title={item.title} description={item.description} darkMode={darkMode} />
             </li>
           ))}
         </ul>
@@ -59,22 +63,6 @@ const Offer = () => {
         <Spline scene="https://prod.spline.design/sB5TQBh9-4IXBrau/scene.splinecode" style={{ maxWidth: '600px' }} />
       </div>
     </div>
-
-    // <div className="p-6 md:mt-20 md:mb-40">
-    //   <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
-    //     <div className="col-span-6 hidden md:block">
-    //       <Spline scene="https://prod.spline.design/sB5TQBh9-4IXBrau/scene.splinecode" style={{ maxWidth: '600px' }} />
-    //     </div>
-
-    //     <div className="col-span-6 flex my-6 md:my-0">
-    //       <div className="flex flex-col justify-center gap-16">
-    //         {Offers.map(item => {
-    //           return <TitleLabel title={item.title} description={item.description} />
-    //         })}
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
   );
 };
 

@@ -72,7 +72,7 @@ const Experience = ({ darkMode }: { darkMode: boolean }) => {
   return (
     <div
       className={`min-h-screen h-full font-main ${
-        !darkMode ? "bg-light text-dark" : "bg-dark text-light"
+        !darkMode ? "text-dark" : "text-light"
       }`}
     >
       <MainLayout darkMode={darkMode}>

@@ -1,5 +1,6 @@
 import Footer from "../component/main/Footer";
 import Hero from "../component/main/Hero";
+import Hero2 from "../component/main/Hero2";
 import Offer from "../component/main/Offer";
 import Projects from "../component/main/Projects";
 import Skills from "../component/main/Skills";
@@ -12,17 +13,17 @@ const Home = ({ darkMode, isAppVisible }: { darkMode: boolean, isAppVisible: boo
   return (
     <div
         className={`min-h-screen h-full font-main ${
-          !darkMode ? "bg-light text-dark" : "bg-dark text-light"
+          !darkMode ? "text-dark" : "text-light"
         }`}
       >
         {isAppVisible ? (
           <div className="z-10">
             <MainLayout darkMode={darkMode}>
               <div className="flex flex-col w-full">
-                {/* <Hero2 /> */}
-                <Hero darkMode={darkMode} />
+                <Hero2 darkMode={darkMode} />
+                {/* <Hero darkMode={darkMode} /> */}
                 <Skills darkMode={darkMode} />
-                <Offer />
+                <Offer darkMode={darkMode} />
                 {/* <About darkMode={darkMode} /> */}
                 {/* <Experience /> */}
                 <Projects darkMode={darkMode} />

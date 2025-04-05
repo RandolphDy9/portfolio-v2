@@ -21,7 +21,7 @@ const Hero = ({ darkMode }: HeroType) => {
   
   return (
     <motion.div ref={targetRef}
-    style={{ opacity, scale }} className="px-6 flex py-12 md:py-0 justify-center w-full gap-8 md:min-h-[80vh] relative">
+    style={{ opacity, scale }} className=" flex py-12 md:py-0 justify-center w-full gap-8 md:min-h-[80vh] relative">
       {/* <div className="hidden md:absolute animate-blob md:block w-[1200px] h-[600px]">
         <Spline scene="https://prod.spline.design/wfXHkAgIdi1WVnH0/scene.splinecode" />
       </div> */}
@@ -31,7 +31,7 @@ const Hero = ({ darkMode }: HeroType) => {
           <img src={Wave} alt="wave-icon" width="26" className="mx-2" /> I am
         </div>
         <RevealAnimation leftToRight={true}>
-          <div className="bg-gradient-to-r from-from via-via to-to text-transparent bg-clip-text text-3xl md:text-6xl font-main my-2 font-bold">
+          <div className="bg-gradient-to-r from-from via-via to-to text-transparent bg-clip-text text-4xl md:text-6xl font-main my-2 font-bold">
             <TypeAnimation
               sequence={[
                 "Randolph Mayson Dy",

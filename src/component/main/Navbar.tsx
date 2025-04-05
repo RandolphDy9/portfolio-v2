@@ -27,7 +27,7 @@ const Navbar = ({ darkMode, handleDarkMode }: NavbarType) => {
   return (
     <nav
       className={`${
-        !darkMode ? "bg-light text-dark shadow-xl" : "bg-dark text-light"
+        !darkMode ? "text-dark shadow-xl" : "text-light"
       } w-full py-6 px-4 md:px-12 font-main`}
     >
       <div className="flex items-center justify-between">

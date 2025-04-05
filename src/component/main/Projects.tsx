@@ -14,7 +14,8 @@ import Video2 from "../../assets/videos/firstgen.mp4";
 import Video3 from "../../assets/videos/drape.mp4";
 
 import { useNavigate } from "react-router";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { useInView } from "framer-motion";
 
 type ProjectType = {
   darkMode: boolean;
@@ -56,7 +57,7 @@ const Card = ({ darkMode, title, description, linkToUrl, used }: CardType) => {
         <div className="flex-1 p-0.5 my-auto rounded bg-gradient-to-r from-from via-via to-to h-full md:h-96">
           <div
             className={`p-8 flex flex-col flex-1 gap-2 h-full ${
-              darkMode ? "bg-dark text-white" : "bg-light text-dark"
+              darkMode ? "bg-dark text-white" : "bg-white text-dark"
             }`}
           >
             <div className="flex justify-between items-center">
@@ -100,10 +101,12 @@ const FeaturedProject = ({
   video,
   linkToUrl,
 }: FeaturedProjectType) => {
-  const [isVideoPlaying, setVideoPlaying] = useState(false);
+
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { margin: "-50% 0px -50% 0px" });
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 mb-12 md:mb-28">
+    <div ref={ref} className="grid grid-cols-1 md:grid-cols-2 mb-12 md:mb-28 my-auto">
       <div className="m-6 md:m-20 flex flex-col justify-center">
         <div>Featured Project</div>
         <RevealAnimation leftToRight={true}>
@@ -123,23 +126,22 @@ const FeaturedProject = ({
         onClick={() => window.open(linkToUrl)}
       >
         <RevealAnimation rightToLeft={true}>
-          {!isVideoPlaying && (
+          {!isInView && (
             <img
               src={image}
               alt="featured-project"
               className="object-cover w-full py-8 shadow-purple-700 shadow-2xl"
-              onMouseEnter={() => setVideoPlaying(true)}
             />
           )}
 
-          {isVideoPlaying && (
+          {isInView && (
             <video
               src={video}
               autoPlay
               loop
               muted
+              preload="auto"
               className="object-cover w-full py-8 shadow-purple-700 shadow-2xl"
-              onMouseLeave={() => setVideoPlaying(false)}
             />
           )}
         </RevealAnimation>

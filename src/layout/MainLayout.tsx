@@ -16,9 +16,9 @@ type LayoutType = {
 
 const MainLayout = ({ darkMode, children }: LayoutType) => {
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen w-full">
 
-      <div className="fixed left-12 top-1/2 transform -translate-y-1/2 items-center hidden md:flex flex-col gap-7">
+      <div className="fixed left-12 top-1/2 transform -translate-y-1/2 items-center hidden md:flex flex-col gap-8">
         <img src={darkMode ? LinkedinWhite : LinkedinBlack} alt="linkedin-icon" width="26" className="cursor-pointer hover:scale-125" onClick={() => window.open('https://www.linkedin.com/in/maysondy/', '_blank')} />
         <img src={darkMode ? CodepenWhite : CodepenBlack} alt="codepen-icon" width="26" className="cursor-pointer hover:scale-125" onClick={() => window.open('https://codepen.io/Randolph-Mayson-Dy', '_blank')} />
         <img src={darkMode ? GithubWhite : GithubBlack} alt="github-icon" width="26" className="cursor-pointer hover:scale-125" onClick={() => window.open('https://github.com/RandolphDy9', '_blank')} />

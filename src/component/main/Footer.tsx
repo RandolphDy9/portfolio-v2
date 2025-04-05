@@ -11,22 +11,13 @@ const Footer = ({ darkMode }: FooterType) => {
     <div className="pt-24 pb-6 md:py-32 text-center w-full md:w-5/6 mx-auto font-secondary px-6">
       <div>
         <GradientText
-          text="Let's Make Great Work Together"
+          text="Let’s Build Something Great"
           classes="text-6xl md:text-8xl pb-4 font-main font-bold"
         />
         <div className="text-lg py-4 flex-wrap md:w-1/2 mx-auto">
           <RevealAnimation>
-            Got a cool idea or project?
-            Let's connect and make it a reality. Feel free to drop me a message,
-            and let's explore the possibilities!
+            Have an idea or project in mind? I’d love to hear about it. Let’s connect and bring it to life.
           </RevealAnimation>
-          {/* <RevealAnimation>
-            Crafted with passion using ReactJS and Tailwind CSS, this portfolio
-            draws inspiration from diverse web design concepts. A fusion of
-            creativity and code, it showcases my journey as a frontend
-            developer. Explore the synergy of innovative design and cutting-edge
-            technology.
-          </RevealAnimation> */}
         </div>
         <div className="mx-auto flex justify-center my-4">
           <ButtonFill
