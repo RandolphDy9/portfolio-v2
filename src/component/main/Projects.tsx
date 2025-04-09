@@ -2,20 +2,16 @@ import LinkWhite from "../../assets/icons/dark/link-white.svg";
 import LinkBlack from "../../assets/icons/light/link-black.svg";
 import FolderWhite from "../../assets/icons/dark/folder-white.svg";
 import FolderBlack from "../../assets/icons/light/folder-black.svg";
+import DownIcon from "../../assets/icons/mouse.png";
 import GradientText from "../shared/GradientText";
 import RevealAnimation from "../shared/RevealAnimation";
 
-import Eastwest from "../../assets/images/projects//eastwest.png";
-import Drape from "../../assets/images/projects/drape.png";
-import FirstGen from "../../assets/images/projects/firstgen.png";
-
-import Video1 from "../../assets/videos/eastwest.mp4";
-import Video2 from "../../assets/videos/firstgen.mp4";
-import Video3 from "../../assets/videos/drape.mp4";
+import Project1 from "../../assets/images/projects/full-eastwest-min.png";
+import Project2 from "../../assets/images/projects/full-firstgen-min.png";
+import Project3 from "../../assets/images/projects/full-drape-min.png";
 
 import { useNavigate } from "react-router";
 import { useRef } from "react";
-import { useInView } from "framer-motion";
 
 type ProjectType = {
   darkMode: boolean;
@@ -38,7 +34,6 @@ type FeaturedProjectType = {
   description: string;
   used: string[];
   image: string;
-  video: string;
   linkToUrl: string;
 };
 
@@ -98,15 +93,15 @@ const FeaturedProject = ({
   description,
   used,
   image,
-  video,
   linkToUrl,
 }: FeaturedProjectType) => {
-
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { margin: "-50% 0px -50% 0px" });
 
   return (
-    <div ref={ref} className="grid grid-cols-1 md:grid-cols-2 mb-12 md:mb-28 my-auto">
+    <div
+      ref={ref}
+      className="grid grid-cols-1 md:grid-cols-2 mb-12 md:mb-28 my-auto"
+    >
       <div className="m-6 md:m-20 flex flex-col justify-center">
         <div>Featured Project</div>
         <RevealAnimation leftToRight={true}>
@@ -126,24 +121,18 @@ const FeaturedProject = ({
         onClick={() => window.open(linkToUrl)}
       >
         <RevealAnimation rightToLeft={true}>
-          {!isInView && (
+          <div className="h-[60vh] overflow-y-scroll">
             <img
               src={image}
               alt="featured-project"
-              className="object-cover w-full py-8 shadow-purple-700 shadow-2xl"
+              className="object-cover w-full shadow-purple-700 shadow-2xl relative"
             />
-          )}
-
-          {isInView && (
-            <video
-              src={video}
-              autoPlay
-              loop
-              muted
-              preload="auto"
-              className="object-cover w-full py-8 shadow-purple-700 shadow-2xl"
+            <img
+              src={DownIcon}
+              alt="down-icon"
+              className="w-16 h-16 absolute bottom-4 right-4 transform  animate-bounce z-10"
             />
-          )}
+          </div>
         </RevealAnimation>
       </div>
     </div>
@@ -164,8 +153,7 @@ const Projects = ({ darkMode }: ProjectType) => {
           it is the world's first insurance company with a cloud-based IT platform, offering a seamless customer
           experience and personalized financial solutions. Explore for a better tomorrow with EastWest Ageas Insurance."
         used={["Angular", "Bootstrap", "NgZorro"]}
-        image={Eastwest}
-        video={Video1}
+        image={Project1}
         linkToUrl="https://ewageas.com.ph/"
       />
       <FeaturedProject
@@ -175,8 +163,7 @@ const Projects = ({ darkMode }: ProjectType) => {
           and Bootstrap's design elegance delivers a visually appealing platform, reflecting our commitment to
           innovation and excellence."
         used={["Angular", "Crafter CMS", "Bootstrap"]}
-        image={FirstGen}
-        video={Video2}
+        image={Project2}
         linkToUrl="https://www.firstgen.com.ph/"
       />
       <FeaturedProject
@@ -186,8 +173,7 @@ const Projects = ({ darkMode }: ProjectType) => {
           collection, and enjoy secure checkout with integrated Stripe payments. Shop confidently at Drape,
           where fashion meets technology seamlessly."
         used={["React", "Tailwind", "NodeJS", "Express"]}
-        image={Drape}
-        video={Video3}
+        image={Project3}
         linkToUrl="https://drape-clothing.netlify.app/"
       />
 
@@ -223,13 +209,6 @@ const Projects = ({ darkMode }: ProjectType) => {
           linkToUrl="https://codepen.io/Randolph-Mayson-Dy/full/VwVBXow"
           used={["React", "Bootstrap", "HTML5", "CSS3"]}
         />
-        {/* <Card
-          darkMode={darkMode}
-          title="Random Quote Generator"
-          description="Developed as a freeCodeCamp challenge, the Random Quote Generator provides ever-changing, engaging inspiration."
-          linkToUrl="https://codepen.io/Randolph-Mayson-Dy/full/gOQzJVb"
-          used={["React", "Bootstrap", "HTML5", "CSS3"]}
-        /> */}
         <Card
           darkMode={darkMode}
           title="Location Tracker"
@@ -244,13 +223,6 @@ const Projects = ({ darkMode }: ProjectType) => {
           linkToUrl="https://codepen.io/Randolph-Mayson-Dy/full/wvQxmVJ"
           used={["React", "Bootstrap", "HTML5", "CSS3"]}
         />
-        {/* <Card
-          darkMode={darkMode}
-          title="Pomodoro Timer"
-          description="Inspired by Pomodoro, this project offers focused time management for enhanced productivity and balance."
-          linkToUrl="https://codepen.io/Randolph-Mayson-Dy/full/OJaBJLd"
-          used={["React", "Bootstrap", "HTML5", "CSS3"]}
-        /> */}
       </div>
 
       <div

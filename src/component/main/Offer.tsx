@@ -1,28 +1,9 @@
 import Spline from "@splinetool/react-spline";
-// import RevealAnimation from "../shared/RevealAnimation";
 import TitleLabel from "../shared/TitleLabel";
 
 type Props = {
   darkMode: boolean;
 };
-
-// type CardType = {
-//   title: string;
-//   description: string;
-// };
-
-// const Card = ({ title, description }: CardType) => {
-//   return (
-//     <RevealAnimation rightToLeft={true}>
-//       <div className="flex flex-col justify-center items-start md:px-8 rounded-2xl">
-//         <div className="text-3xl bg-gradient-to-r from-from via-via to-to text-transparent bg-clip-text font-bold">
-//           {title}
-//         </div>
-//         <div className="my-3">{description}</div>
-//       </div>
-//     </RevealAnimation>
-//   );
-// };
 
 const Offers = [
   {
