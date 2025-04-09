@@ -30,8 +30,8 @@ const Offers = [
 
 const Offer = ({ darkMode }: Props) => {
   return (
-    <div className="flex w-full items-start gap-20">
-      <div className="w-full py-[30vh]">
+    <div className="flex w-full md:items-start md:gap-20">
+      <div className="w-full md:py-[30vh]">
         <ul>
           {Offers.map((item, index) => (
             <li key={index}>
@@ -40,7 +40,7 @@ const Offer = ({ darkMode }: Props) => {
           ))}
         </ul>
       </div>
-      <div className="sticky top-0 flex h-screen w-full items-center">
+      <div className="hidden md:sticky top-0 md:flex h-screen w-full items-center">
         <Spline scene="https://prod.spline.design/sB5TQBh9-4IXBrau/scene.splinecode" style={{ maxWidth: '600px' }} />
       </div>
     </div>

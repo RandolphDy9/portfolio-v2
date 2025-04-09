@@ -117,11 +117,11 @@ const FeaturedProject = ({
         </div>
       </div>
       <div
-        className="h-auto w-full cursor-pointer"
+        className="h-auto w-full cursor-pointer my-6"
         onClick={() => window.open(linkToUrl)}
       >
         <RevealAnimation rightToLeft={true}>
-          <div className="h-[60vh] overflow-y-scroll">
+          <div className="h-[55vh] overflow-y-scroll">
             <img
               src={image}
               alt="featured-project"
