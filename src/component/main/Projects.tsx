@@ -14,7 +14,7 @@ import Video2 from "../../assets/videos/firstgen.mp4";
 import Video3 from "../../assets/videos/drape.mp4";
 
 import { useNavigate } from "react-router";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { useInView } from "framer-motion";
 
 type ProjectType = {
