@@ -20,11 +20,8 @@ const Home = ({ darkMode, isAppVisible }: { darkMode: boolean, isAppVisible: boo
             <MainLayout darkMode={darkMode}>
               <div className="flex flex-col w-full">
                 <Hero2 darkMode={darkMode} />
-                {/* <Hero darkMode={darkMode} /> */}
                 <Skills darkMode={darkMode} />
                 <Offer darkMode={darkMode} />
-                {/* <About darkMode={darkMode} /> */}
-                {/* <Experience /> */}
                 <Projects darkMode={darkMode} />
                 <Testimonials darkMode={darkMode} />
                 <Footer darkMode={darkMode} />

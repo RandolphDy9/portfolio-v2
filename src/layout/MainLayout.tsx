@@ -1,5 +1,3 @@
-import FacebookBlack from '../assets/icons/light/01-fb-black.svg';
-import FacebookWhite from '../assets/icons/dark/01-fb-white.svg';
 import GithubBlack from '../assets/icons/light/02-github-black.svg';
 import GithubWhite from '../assets/icons/dark/02-github-white.svg';
 import CodepenBlack from '../assets/icons/light/03-codepen-black.svg';
@@ -20,9 +18,8 @@ const MainLayout = ({ darkMode, children }: LayoutType) => {
 
       <div className="fixed left-12 top-1/2 transform -translate-y-1/2 items-center hidden md:flex flex-col gap-8">
         <img src={darkMode ? LinkedinWhite : LinkedinBlack} alt="linkedin-icon" width="26" className="cursor-pointer hover:scale-125" onClick={() => window.open('https://www.linkedin.com/in/maysondy/', '_blank')} />
-        <img src={darkMode ? CodepenWhite : CodepenBlack} alt="codepen-icon" width="26" className="cursor-pointer hover:scale-125" onClick={() => window.open('https://codepen.io/Randolph-Mayson-Dy', '_blank')} />
         <img src={darkMode ? GithubWhite : GithubBlack} alt="github-icon" width="26" className="cursor-pointer hover:scale-125" onClick={() => window.open('https://github.com/RandolphDy9', '_blank')} />
-        <img src={darkMode ? FacebookWhite : FacebookBlack} alt="facebook-icon" width="30" className="cursor-pointer hover:scale-125" onClick={() => window.open('https://www.facebook.com/randolph.dy/', '_blank')} />
+        <img src={darkMode ? CodepenWhite : CodepenBlack} alt="codepen-icon" width="26" className="cursor-pointer hover:scale-125" onClick={() => window.open('https://codepen.io/Randolph-Mayson-Dy', '_blank')} />
       </div>
 
       <div className="w-full md:w-9/12 mx-auto">
