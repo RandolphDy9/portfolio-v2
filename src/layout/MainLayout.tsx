@@ -16,10 +16,51 @@ const MainLayout = ({ darkMode, children }: LayoutType) => {
   return (
     <div className="relative min-h-screen w-full">
 
-      <div className="fixed left-12 top-1/2 transform -translate-y-1/2 items-center hidden md:flex flex-col gap-8">
-        <img src={darkMode ? LinkedinWhite : LinkedinBlack} alt="linkedin-icon" width="26" className="cursor-pointer hover:scale-125" onClick={() => window.open('https://www.linkedin.com/in/maysondy/', '_blank')} />
-        <img src={darkMode ? GithubWhite : GithubBlack} alt="github-icon" width="26" className="cursor-pointer hover:scale-125" onClick={() => window.open('https://github.com/RandolphDy9', '_blank')} />
-        <img src={darkMode ? CodepenWhite : CodepenBlack} alt="codepen-icon" width="26" className="cursor-pointer hover:scale-125" onClick={() => window.open('https://codepen.io/Randolph-Mayson-Dy', '_blank')} />
+      <div className="fixed left-12 top-1/2 transform -translate-y-1/2 items-center hidden md:flex flex-col gap-10">
+        {/* LinkedIn */}
+        <div className="relative group">
+          <img
+            src={darkMode ? LinkedinWhite : LinkedinBlack}
+            alt="linkedin-icon"
+            width="30"
+            className="cursor-pointer hover:scale-125 transition-transform duration-300 animate-pulse"
+            style={{ animationDuration: '2s' }}
+            onClick={() => window.open('https://www.linkedin.com/in/maysondy/', '_blank')}
+          />
+          <div className="absolute left-full ml-3 top-1/2 transform -translate-y-1/2 px-2 py-1 text-sm bg-gray-800 text-white rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap z-10 shadow-md">
+            LinkedIn
+          </div>
+        </div>
+
+        {/* GitHub */}
+        <div className="relative group">
+          <img
+            src={darkMode ? GithubWhite : GithubBlack}
+            alt="github-icon"
+            width="30"
+            className="cursor-pointer hover:scale-125 transition-transform duration-300 animate-pulse"
+            style={{ animationDuration: '2.2s' }}
+            onClick={() => window.open('https://github.com/RandolphDy9', '_blank')}
+          />
+          <div className="absolute left-full ml-3 top-1/2 transform -translate-y-1/2 px-2 py-1 text-sm bg-gray-800 text-white rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap z-10 shadow-md">
+            GitHub
+          </div>
+        </div>
+
+        {/* CodePen */}
+        <div className="relative group">
+          <img
+            src={darkMode ? CodepenWhite : CodepenBlack}
+            alt="codepen-icon"
+            width="30"
+            className="cursor-pointer hover:scale-125 transition-transform duration-300 animate-pulse"
+            style={{ animationDuration: '2.4s' }}
+            onClick={() => window.open('https://codepen.io/Randolph-Mayson-Dy', '_blank')}
+          />
+          <div className="absolute left-full ml-3 top-1/2 transform -translate-y-1/2 px-2 py-1 text-sm bg-gray-800 text-white rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap z-10 shadow-md">
+            CodePen
+          </div>
+        </div>
       </div>
 
       <div className="w-full md:w-9/12 mx-auto">
@@ -37,7 +78,7 @@ const MainLayout = ({ darkMode, children }: LayoutType) => {
         </div>
         <div className="transform rotate-90 text-sm font-bold">mayson.dy@gmail.com</div>
       </div>
-      
+
     </div>
   );
 };

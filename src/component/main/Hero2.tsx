@@ -99,7 +99,7 @@ const Hero2 = ({ darkMode }: HeroType) => {
               }`}
             onClick={() =>
               window.open(
-                "https://drive.google.com/file/d/1pM_ewmE3ahnS8kvC0ughTN8Zr0cp7sTm/view?usp=sharing"
+                "https://drive.google.com/file/d/1Dp4pbiIhao07mql4eDY_8bqFhM7U1sFj/view?usp=sharing"
               )
             }
           />
