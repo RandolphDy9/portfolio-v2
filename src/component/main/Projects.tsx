@@ -1,7 +1,3 @@
-import LinkWhite from "../../assets/icons/dark/link-white.svg";
-import LinkBlack from "../../assets/icons/light/link-black.svg";
-import FolderWhite from "../../assets/icons/dark/folder-white.svg";
-import FolderBlack from "../../assets/icons/light/folder-black.svg";
 import DownIcon from "../../assets/icons/mouse.png";
 import GradientText from "../shared/GradientText";
 import RevealAnimation from "../shared/RevealAnimation";
@@ -12,17 +8,10 @@ import Project3 from "../../assets/images/projects/full-drape-min.png";
 
 import { useNavigate } from "react-router";
 import { useRef } from "react";
+import Card from "../shared/Card";
 
 type ProjectType = {
   darkMode: boolean;
-};
-
-type CardType = {
-  darkMode: boolean;
-  title: string;
-  description: string;
-  linkToUrl: string;
-  used: string[];
 };
 
 type BadgeType = {
@@ -45,48 +34,47 @@ const Badge = ({ label }: BadgeType) => {
   );
 };
 
-const Card = ({ darkMode, title, description, linkToUrl, used }: CardType) => {
-  return (
-    <div className="flex flex-col flex-grow w-auto">
-      <RevealAnimation>
-        <div className="flex-1 p-0.5 my-auto rounded bg-gradient-to-r from-from via-via to-to h-full md:h-96">
-          <div
-            className={`p-8 flex flex-col flex-1 gap-2 h-full ${
-              darkMode ? "bg-dark text-white" : "bg-white text-dark"
-            }`}
-          >
-            <div className="flex justify-between items-center">
-              <div>
-                <img
-                  src={`${darkMode ? FolderWhite : FolderBlack}`}
-                  alt="external-link"
-                  width="35"
-                />
-              </div>
-              <div
-                className="cursor-pointer hover:scale-110"
-                onClick={() => window.open(linkToUrl)}
-              >
-                <img
-                  src={`${darkMode ? LinkWhite : LinkBlack}`}
-                  alt="external-link"
-                  width="24"
-                />
-              </div>
-            </div>
-            <GradientText text={title} classes="text-4xl font-bold" />
-            <div>{description}</div>
-            <div className="flex gap-2">
-              {used.map((item: string) => {
-                return <Badge key={item} label={item} />;
-              })}
-            </div>
-          </div>
-        </div>
-      </RevealAnimation>
-    </div>
-  );
-};
+// const Card = ({ darkMode, title, description, linkToUrl, used }: CardType) => {
+//   return (
+//     <div className="flex flex-col flex-grow w-auto">
+//       <RevealAnimation>
+//         <div className="flex-1 p-0.5 my-auto rounded bg-gradient-to-r from-from via-via to-to h-full md:h-96">
+//           <div
+//             className={`p-8 flex flex-col flex-1 gap-2 h-full ${darkMode ? "bg-dark text-white" : "bg-white text-dark"
+//               }`}
+//           >
+//             <div className="flex justify-between items-center">
+//               <div>
+//                 <img
+//                   src={`${darkMode ? FolderWhite : FolderBlack}`}
+//                   alt="external-link"
+//                   width="35"
+//                 />
+//               </div>
+//               <div
+//                 className="cursor-pointer hover:scale-110"
+//                 onClick={() => window.open(linkToUrl)}
+//               >
+//                 <img
+//                   src={`${darkMode ? LinkWhite : LinkBlack}`}
+//                   alt="external-link"
+//                   width="24"
+//                 />
+//               </div>
+//             </div>
+//             <GradientText text={title} classes="text-4xl font-bold" />
+//             <div>{description}</div>
+//             <div className="flex gap-2">
+//               {used.map((item: string) => {
+//                 return <Badge key={item} label={item} />;
+//               })}
+//             </div>
+//           </div>
+//         </div>
+//       </RevealAnimation>
+//     </div>
+//   );
+// };
 
 const FeaturedProject = ({
   title,
@@ -144,8 +132,11 @@ const Projects = ({ darkMode }: ProjectType) => {
 
   return (
     <div id="projects-section">
-      <div className="text-3xl md:text-6xl text-center md:mt-12 my-16">
-        Featured projects
+      <div className="text-center mb-16">
+        <h2 className={`text-3xl md:text-6xl font-bold mb-4 ${darkMode ? "text-white" : "text-gray-900"}`}>
+          Featured projects
+        </h2>
+        <div className="w-24 h-1 bg-purple-500 mx-auto rounded-full"></div>
       </div>
       <FeaturedProject
         title="Eastwest Ageas Insurance"
@@ -177,7 +168,63 @@ const Projects = ({ darkMode }: ProjectType) => {
         linkToUrl="https://drape-clothing.netlify.app/"
       />
 
-      <div className="text-3xl md:text-6xl text-center md:mt-28 my-16">
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h2 className={`text-3xl md:text-6xl font-bold mb-4 ${darkMode ? "text-white" : "text-gray-900"}`}>
+            Other notable projects
+          </h2>
+          <div className="w-24 h-1 bg-purple-500 mx-auto rounded-full"></div>
+        </div>
+
+        {/* Projects Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-6 md:px-10">
+          <Card
+            darkMode={darkMode}
+            title="Apple Clone"
+            description="Created an Apple Clone website using React and GSAP with smooth 3D effects."
+            linkToUrl="https://dancing-croissant-98a3c3.netlify.app/"
+            used={["React", "Tailwind CSS", "GSAP"]}
+          />
+          <Card
+            darkMode={darkMode}
+            title="Thinkboard"
+            description="A full-stack task app for creating and managing tasks with a clean UI, built using React, Node.js, Express, and MongoDB."
+            linkToUrl="https://mern-thinkboard-6cbi.onrender.com"
+            used={["React", "NodeJS", "Express", "MongoDB"]}
+          />
+          <Card
+            darkMode={darkMode}
+            title="StaffHub"
+            description="StaffHub streamlines employee management with NodeJS backend and intuitive Angular frontend, simplifying workforce data operations."
+            linkToUrl="https://staffhub-site.netlify.app"
+            used={["Angular", "Tailwind CSS", "NodeJS"]}
+          />
+          <Card
+            darkMode={darkMode}
+            title="Newsfeed"
+            description="Influenced by Dribbble's artistry, Newsfeed harmoniously unites React's functionality with creative aesthetic innovation."
+            linkToUrl="https://newsfeed-site.netlify.app"
+            used={["React", "Tailwind CSS"]}
+          />
+          <Card
+            darkMode={darkMode}
+            title="SimpleLyric"
+            description="A lyrics search app built for a technical exam using React, Tailwind CSS, and Redux."
+            linkToUrl="https://bmi-task-react.netlify.app/"
+            used={["React", "Tailwind CSS", "Redux"]}
+          />
+          <Card
+            darkMode={darkMode}
+            title="Tarsier Studios"
+            description="A Web 3.0 landing page quickly built with Webflow and designed in Figma."
+            linkToUrl="https://tarsier-studios.webflow.io/"
+            used={["Webflow", "Figma"]}
+          />
+        </div>
+      </div>
+
+      {/* <div className="text-3xl md:text-6xl text-center md:mt-28 my-16">
         Other notable projects
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-6 md:px-10">
@@ -223,7 +270,7 @@ const Projects = ({ darkMode }: ProjectType) => {
           linkToUrl="https://codepen.io/Randolph-Mayson-Dy/full/wvQxmVJ"
           used={["React", "Bootstrap", "HTML5", "CSS3"]}
         />
-      </div>
+      </div> */}
 
       <div
         className="text-lg md:text-xl text-center mx-auto my-8 cursor-pointer relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-via after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"

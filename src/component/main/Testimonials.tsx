@@ -10,7 +10,7 @@ type CardType = {
 
 const Card = ({ darkMode, name, position, comment }: CardType) => {
   return (
-    <div className={`flex min-w-[450px] border rounded-xl mx-4 gap-4 shadow-xl ${darkMode ? 'border-white' : 'border-dark' }`}>
+    <div className={`flex min-w-[450px] border rounded-xl mx-4 gap-4 shadow-xl ${darkMode ? 'border-white' : 'border-dark'}`}>
       {/* <img
         src={Exist}
         alt="Company Logo"
@@ -19,8 +19,8 @@ const Card = ({ darkMode, name, position, comment }: CardType) => {
       <div className="flex flex-col px-12 py-6 h-56">
         <div className="flex justify-between items-start">
           <div className="flex flex-col">
-            <div className="text-2xl">{ name }</div>
-            <div className="italic">{ position }</div>
+            <div className="text-2xl">{name}</div>
+            <div className="italic">{position}</div>
           </div>
           {darkMode ? (
             <img src={QuoteIconLight} alt="" width="35" />
@@ -29,7 +29,7 @@ const Card = ({ darkMode, name, position, comment }: CardType) => {
           )}
         </div>
         <div className="py-2">
-          { comment }
+          {comment}
         </div>
       </div>
     </div>
@@ -40,7 +40,12 @@ const Testimonials = ({ darkMode }: { darkMode: boolean }) => {
   return (
     <div className="my-8">
       <div className="text-3xl md:text-6xl text-center md:mt-28 my-16">
-        Testimonials
+        <div className="text-center mb-16">
+          <h2 className={`text-3xl md:text-6xl font-bold mb-4 ${darkMode ? "text-white" : "text-gray-900"}`}>
+            Testimonials
+          </h2>
+          <div className="w-24 h-1 bg-purple-500 mx-auto rounded-full"></div>
+        </div>
         <div className="text-center text-lg mt-4">
           Discover what others have to say about my work and expertise.
         </div>
@@ -89,7 +94,7 @@ const Testimonials = ({ darkMode }: { darkMode: boolean }) => {
         <div className="w-full inline-flex flex-nowrap overflow-hidden">
           <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll-right-slow">
             <li>
-              <Card darkMode={darkMode} name="Kim O." position="Java Developer" comment="He's a proactive communicator, fostering a positive work environment and contributing meaningfully to discussions."  />
+              <Card darkMode={darkMode} name="Kim O." position="Java Developer" comment="He's a proactive communicator, fostering a positive work environment and contributing meaningfully to discussions." />
             </li>
             <li>
               <Card darkMode={darkMode} name="Drexler S." position="Project Manager" comment="He is a dedicated and talented professional. He is not just a colleague but a true team player who adds positivity to the workplace." />
@@ -106,7 +111,7 @@ const Testimonials = ({ darkMode }: { darkMode: boolean }) => {
             aria-hidden="true"
           >
             <li>
-              <Card darkMode={darkMode} name="Kim O." position="Java Developer" comment="He's a proactive communicator, fostering a positive work environment and contributing meaningfully to discussions."  />
+              <Card darkMode={darkMode} name="Kim O." position="Java Developer" comment="He's a proactive communicator, fostering a positive work environment and contributing meaningfully to discussions." />
             </li>
             <li>
               <Card darkMode={darkMode} name="Drexler S." position="Project Manager" comment="He is a dedicated and talented professional. He is not just a colleague but a true team player who adds positivity to the workplace." />
