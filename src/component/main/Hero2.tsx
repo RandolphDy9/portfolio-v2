@@ -33,7 +33,7 @@ const Hero2 = ({ darkMode }: HeroType) => {
           </div>
           {/* <div className="flex flex-col items-start"> */}
           <span
-            className={`inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-sm font-medium
+            className={`inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-sm font-medium mx-8
       ${darkMode
                 ? "bg-green-900/20 text-green-300"
                 : "bg-green-200 text-green-900"

@@ -6,6 +6,7 @@ import About from "./pages/About";
 import { useEffect, useState } from "react";
 import Navbar from "./component/main/Navbar";
 import Experience from "./pages/Experience";
+import SplashCursor from "./component/main/SplashCursor";
 
 function App() {
   const [darkMode, setDarkMode] = useState<boolean>(true);
@@ -28,6 +29,7 @@ function App() {
             : "bg-white text-dark"
         }`}
       ></div>
+      <SplashCursor />
 
       <Router>
         {isAppVisible && (
